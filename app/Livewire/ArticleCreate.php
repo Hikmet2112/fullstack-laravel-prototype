@@ -36,6 +36,10 @@ class ArticleCreate extends Component
     
     public function articleStore(){
 
+
+        $this->validate();
+
+
         $user = Auth::user();
 
         $article = $user->articles()->create([
@@ -47,7 +51,7 @@ class ArticleCreate extends Component
 
         $article->categories()->attach($this->categoryChecks);
 
-        $this->validate();
+        
 
         // Article::create([
         //     'title'=>$this->title,
