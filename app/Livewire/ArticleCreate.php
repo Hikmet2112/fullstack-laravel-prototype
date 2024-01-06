@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleCreate extends Component
 {
@@ -11,13 +12,13 @@ class ArticleCreate extends Component
     public $title;
     public $price;
     public $body;
-
+    public $user_id;
 
 
     protected $rules=[
 
         'title'=> 'required|min:3',
-        'price'=>'required',
+        'price'=>'required|max:10',
         'body'=>'required|min:15',
     ];
     protected $messages=[
@@ -38,9 +39,12 @@ class ArticleCreate extends Component
         Article::create([
             'title'=>$this->title,
             'price'=>$this->price,
-            'body'=>$this->body,
+            'body'=>$this->body, 
+            'user_id'=>Auth::id()
         ]);  
+      
         session()->flash('message' , 'articolo inserito correttamente') ;
+
         $this->reset(); 
 
     }
