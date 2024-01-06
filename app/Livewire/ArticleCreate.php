@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 
 class ArticleCreate extends Component
@@ -13,7 +14,9 @@ class ArticleCreate extends Component
     public $price;
     public $body;
     public $user_id;
+    // public $category_id;
 
+    public $categoryChecks = [];
 
     protected $rules=[
 
@@ -33,15 +36,30 @@ class ArticleCreate extends Component
     
     public function articleStore(){
 
-        $this->validate();
+        $user = Auth::user();
 
-     
-        Article::create([
+        $article = $user->articles()->create([
             'title'=>$this->title,
             'price'=>$this->price,
-            'body'=>$this->body, 
-            'user_id'=>Auth::id()
-        ]);  
+            'body'=>$this->body,
+            'user_id'=>Auth::user()->id,
+        ]);
+
+        $article->categories()->attach($this->categoryChecks);
+
+        $this->validate();
+
+        // Article::create([
+        //     'title'=>$this->title,
+        //     'price'=>$this->price,
+        //     'body'=>$this->body, 
+        //     'user_id'=>$user->id,
+        //     'category_id'=>Category::id()
+        // ]);
+
+        // Category::create([
+        //     'name'=>$this->name
+        // ]);
       
         session()->flash('message' , 'articolo inserito correttamente') ;
 
@@ -56,7 +74,8 @@ class ArticleCreate extends Component
 
     public function render()
     {
+        $categories = Category::all();
         
-        return view('livewire.article-create');
+        return view('livewire.article-create', compact('categories'));
     }
 }

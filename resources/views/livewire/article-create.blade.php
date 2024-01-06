@@ -14,14 +14,14 @@
             {{ session('message') }}
         </div>
         @endif
+
         <form enctype="multipart/form-data" class="p-4 border-4 shadow rounded" wire:submit="articleStore">
-            
             
             {{-- <div class="mb-3">
                 <label for="img" class="form-label"> Allega file</label>
                 <input type="file"  name="img"  class="form-control"  id="img" >
-                
             </div> --}}
+
             <div class="mb-3">
                 <label for="title" class="form-label">Nome prodotto</label>
                 <input type="text" wire:model.blur='title' class="form-control" id="title">
@@ -33,6 +33,18 @@
             <div class="d-flex flex-column mb-3">
                 <label for="body" class="form-label">Descrizione</label>
                 <textarea name="body" wire:model.blur='body' id="body" cols="40" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+
+                @foreach ($categories as $category)
+                <div class="form-check">
+                    <input class="form-check-input" wire:model="categoryChecks" type="checkbox" value="{{$category->id}}" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      {{$category->name}}
+                    </label>
+                </div>
+                @endforeach
+
             </div>
             
             <button type="submit" class="btn btn-primary">Inserisci</button>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 
 /*
@@ -14,12 +15,7 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('homepage');
-
-
+Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 //ROTTE ARTICLE
-
-Route::resource('article',ArticleController::class);
+Route::resource('article', ArticleController::class);
