@@ -41,8 +41,21 @@
 }
 
 
-.pippo {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.category-nav-link{
+    border-radius: 15px;
+    border: solid 1px black;
+    box-shadow: 2px 2px black;
+    padding: 15px;
+    transition: 0.4s;
+}
+
+.category-nav-link:hover{
+    border-radius: 15px;
+    border: solid 1px black;
+    padding: 15px;
+    transform: scale(1.1);
+}
+
+.decoration-none{
+    text-decoration: none;
 }

@@ -5,7 +5,7 @@
   <div class="card-body">
     <a href="{{route('categoryShow',['category'=>$article->category])}}">{{$article->category->name}}</a>
     <h5 class="card-title">{{$article->title}}</h5>
-    <p class="card-text">{{$article->body}}</p>
+    <p class="card-text">{{$article->body}}</p> 
     <p class="card-text">{{$article->price}}</p>
     <a href="{{route('article.show', compact('article'))}}"  class="btn btn-primary">Dettaglio</a>
   </div>

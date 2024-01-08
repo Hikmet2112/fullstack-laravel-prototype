@@ -1,5 +1,5 @@
 
- <a class="btn m-4 btn-cus-nav"  data-bs-toggle="offcanvas" href="#offcanvasDark" role="button" aria-controls="offcanvasExample">
+<a class="btn m-4 btn-cus-nav"  data-bs-toggle="offcanvas" href="#offcanvasDark" role="button" aria-controls="offcanvasExample">
   <i class="fa-solid fa-bars fs-5"></i>
 </a> 
 
@@ -20,11 +20,11 @@
     
   </div>
   <div class="offcanvas-body">
-    <p><nav class="navbar navbar-expand-lg bg-body-trasparent">
+    <nav class="navbar navbar-expand-lg bg-body-trasparent">
       <div class="container-fluid">
         <a class="navbar-brand text-white" href="#">E-presto</a>
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <spa><i class="fa-solid fa-ellipsis fs-5 text-white"></i></spa>
+          <span><i class="fa-solid fa-ellipsis fs-5 text-white"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -51,12 +51,8 @@
             </li>
             @endauth
             
-            
-            
-            
-
           </div>
         </div>
-      </nav> </p>
+      </nav>
     </div>
   </div>

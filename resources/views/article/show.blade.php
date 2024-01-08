@@ -1,4 +1,13 @@
 <x-layout>
+
+  <div class="row my-4">
+    <div class="col-12 d-flex justify-content-center flex-column align-items-center">
+        <h2 class="">{{$article->title}}</h2>
+        <h4 class="">{{$article->body}}</h4>
+        <p class="">{{$article->price}}</p>
+    </div>
+  </div>
+
     <div class="container-fluid vh-100">
         <div class="row h-100">
             <div class="col-12 h-100 d-flex justify-content-center">
@@ -26,13 +35,7 @@
             </div>
         </div>
 
-          <div class="row my-4">
-            <div class="col-12 d-flex justify-content-center flex-column align-items-center">
-                <h2 class="bg-danger">{{$article->title}}</h2>
-                <h4 class="bg-danger">{{$article->body}}</h4>
-                <p class="bg-danger">{{$article->price}}</p>
-            </div>
-          </div>
+          
 
     </div>
     
