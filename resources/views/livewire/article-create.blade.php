@@ -35,15 +35,19 @@
                 <textarea name="body" wire:model.blur='body' id="body" cols="40" rows="3"></textarea>
             </div>
             <div class="mb-3">
+                {{-- @dd($categories) --}}
 
-                @foreach ($categories as $category)
-                <div class="form-check">
-                    <input class="form-check-input" wire:model="categoryChecks" type="checkbox" value="{{$category->id}}" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      {{$category->name}}
-                    </label>
-                </div>
-                @endforeach
+                
+                <select class="form-select" wire:model="category" id="category" aria-label="Default select example">
+                    <option disabled>Seleziona la tua categoria</option>
+                    @foreach ($categories as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                    
+                    @endforeach
+                   
+                  </select>
+                
+               
 
             </div>
             

@@ -14,7 +14,9 @@ class ArticleCreate extends Component
     public $price;
     public $body;
     public $user_id;
-    // public $category_id;
+    public $category;
+    public $article;
+    
 
     public $categoryChecks = [];
 
@@ -37,19 +39,23 @@ class ArticleCreate extends Component
     public function articleStore(){
 
 
+        
+
+
+        // $this->user_id = Auth::user()->id;
+
         $this->validate();
 
-
-        $user = Auth::user();
-
-        $article = $user->articles()->create([
+        $this->article = Category::find($this->category)->articles()->create([
             'title'=>$this->title,
             'price'=>$this->price,
             'body'=>$this->body,
             'user_id'=>Auth::user()->id,
         ]);
 
-        $article->categories()->attach($this->categoryChecks);
+        $this->article->user()->associate(Auth::user());
+
+
 
         
 
