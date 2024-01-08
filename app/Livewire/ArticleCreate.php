@@ -24,15 +24,18 @@ class ArticleCreate extends Component
     protected $rules=[
 
         'title'=> 'required|min:3',
-        'price'=>'required|max:10',
+        'price'=>'required',
         'body'=>'required|min:15',
+        'category'=>'required'
     ];
     protected $messages=[
         
-        'title.required'=> 'titolo obbligatorio',
-        'price.required'=> 'il prezzo è obbligatorio',
-        'body.required'=> 'corpo obbligatorio',
-        
+        'title.required'=> 'Il titolo obbligatorio',
+        'price.required'=> 'Il prezzo è obbligatorio',
+        'body.required'=> 'Il corpo obbligatorio',
+        'category.required'=> 'La categoria è obbligatoria',
+        'title.min'=> 'Il titolo deve contenere almeno 3 caratteri',
+        'body.min'=> 'Il corpo del testo deve contenere almeno 15 caratteri'
     ];
 
 

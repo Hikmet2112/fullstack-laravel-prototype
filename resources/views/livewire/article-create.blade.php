@@ -35,24 +35,20 @@
                 <textarea name="body" wire:model.blur='body' id="body" cols="40" rows="3"></textarea>
             </div>
             <div class="mb-3">
-                {{-- @dd($categories) --}}
 
-                <div> <p>Selezione la tua categoria</p> </div>
+                <label for="category" class="form-label">Categoria</label>
                 
-                <select class="form-select" wire:model="category" id="category" aria-label="Default select example">
+                <select class="form-select" wire:model.defer="category" id="category" aria-label="Default select example">
 
-                    
+                    <option value="" hidden>Seleziona una categoria</option>
+
                     @foreach ($categories as $category)
-                    <option value="{{$category->id}}">{{$category->name}}</option>
-                    
+                        <option value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
-                   
-                  </select>
+                        
+                </select>
                 
-               
-
             </div>
-            
             <button type="submit" class="btn btn-primary">Inserisci</button>
         </form>
     </div>
