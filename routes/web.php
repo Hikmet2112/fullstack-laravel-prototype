@@ -17,5 +17,9 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
+Route::get('/category/{category}',[PublicController::class, 'categoryShow'])->name('categoryShow');
+
 //ROTTE ARTICLE
 Route::resource('article', ArticleController::class);
+
+

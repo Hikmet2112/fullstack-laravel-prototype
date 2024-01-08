@@ -12,14 +12,9 @@
             :article="$article"
             ></x-card-welcome>
 
-
-
-
-
         {{-- } --}}
         {{-- @endif --}}
-       
-
+    
         
         {{-- @endforeach --}}
 

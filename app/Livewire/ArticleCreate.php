@@ -56,7 +56,7 @@ class ArticleCreate extends Component
 
         $this->article->user()->associate(Auth::user());
 
-        $article->categories()->attach($this->category_id);
+        // $article->categories()->attach($this->category_id);
 
 
 

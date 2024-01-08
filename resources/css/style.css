@@ -1,41 +1,48 @@
-.UserImg{
-     
-    width: 250px; 
-    height: 250px; 
+.UserImg {
+
+    width: 250px;
+    height: 250px;
     border: solid 2px rgb(234, 229, 229);
-    border-radius: 50%; 
- 
+    border-radius: 50%;
+
 
 }
 
-.dropdown-menu{
+.dropdown-menu {
 
-    background-color:#212121;
+    background-color: #212121;
     border: none;
-    
+
 
 }
 
-.offcanvas{
+.offcanvas {
 
     background-color: #212121 !important;
 
 }
 
-.navbar-toggler{
+.navbar-toggler {
 
     border: solid 1px whitesmoke;
 
 }
 
 
+.img-custom {
+    width: 100% !important;
+
+}
+
+.h-carousel {
+    height: 100%;
+    width: 100vh;
+    overflow: hidden;
+}
 
 
-
-
-
-
-
-
-
-
+.pippo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
