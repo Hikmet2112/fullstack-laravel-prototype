@@ -37,9 +37,11 @@
             <div class="mb-3">
                 {{-- @dd($categories) --}}
 
+                <div> <p>Selezione la tua categoria</p> </div>
                 
                 <select class="form-select" wire:model="category" id="category" aria-label="Default select example">
-                    <option disabled>Seleziona la tua categoria</option>
+
+                    
                     @foreach ($categories as $category)
                     <option value="{{$category->id}}">{{$category->name}}</option>
                     

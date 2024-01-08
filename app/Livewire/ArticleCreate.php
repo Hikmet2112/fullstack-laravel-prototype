@@ -15,6 +15,7 @@ class ArticleCreate extends Component
     public $body;
     public $user_id;
     public $category;
+    public $category_id;
     public $article;
     
 
@@ -39,7 +40,7 @@ class ArticleCreate extends Component
     public function articleStore(){
 
 
-        
+        // dd($this->category);
 
 
         // $this->user_id = Auth::user()->id;
@@ -54,6 +55,8 @@ class ArticleCreate extends Component
         ]);
 
         $this->article->user()->associate(Auth::user());
+
+        $article->categories()->attach($this->category_id);
 
 
 

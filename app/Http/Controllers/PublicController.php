@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
     public function homepage() {
-        return view('welcome');
+
+   
+
+
+        $articles = Article::orderBy('created_at','desc')->take(6)->get();
+        // dd($articles);
+        return view('welcome',compact('articles'));
+        
     }
 }
