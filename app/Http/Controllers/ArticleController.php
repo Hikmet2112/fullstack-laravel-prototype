@@ -17,9 +17,11 @@ class ArticleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Article $article)
     {
-        //
+        $articles=Article::where('is_accepted',true);
+
+        return view('article.index',compact('articles'));
     }
 
     /**

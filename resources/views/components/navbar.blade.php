@@ -32,9 +32,25 @@
               <a class="nav-link active text-white" aria-current="page" href="{{route('homepage')}}"><i class="fa-solid fa-house fs-5"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Link</a>
+              <a class="nav-link text-white" href="{{route('article.index')}}">Tutti gl'articoli</a>
             </li>
-            @auth
+            @auth 
+            
+            @if(Auth::user()->is_revisor) 
+            <li class="nav-item">
+              <a class="nav-link text-white btn btn-danger"  href="{{route('revisor.index')}}">Revisore
+                
+                <span class="position-absolute top-0 start-75 translate-middle badge rounded-pill bg-danger"> 
+                  
+                  {{App\Models\Article::toBeRevisionedCount()}}
+                  
+                  <span class="visually-hidden">Unread messages</span>
+                </span>
+              </a> 
+            </li>
+            
+            
+            @endif
             <li class="nav-item dropdown custom ">
               <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-regular fa-user fs-5"></i> {{Auth::user()->name}}</a>
               

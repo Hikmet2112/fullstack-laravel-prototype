@@ -13,7 +13,7 @@ class PublicController extends Controller
    
 
 
-        $articles = Article::orderBy('created_at','desc')->take(6)->get();
+        $articles = Article::where('is_accepted',true)->orderBy('created_at','desc')->take(6)->get();
         // dd($articles);
         return view('welcome',compact('articles'));
         
