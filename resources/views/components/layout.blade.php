@@ -19,7 +19,10 @@
    <x-form-work-us></x-form-work-us> 
 @endauth
 
-<x-footer></x-footer>
+<x-footer></x-footer> 
+
+
+
 
 
 </body>
