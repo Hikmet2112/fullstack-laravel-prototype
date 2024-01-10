@@ -10,7 +10,8 @@
     <h1>Richiesta di diventare revisore</h1> 
     <h2>Ecco i suoi dati:</h2> 
     <h5>Nome: {{$user->name}}</h5> 
-    <h5>Email: {{$user->email}}</h5> 
+    <h5>Email: {{$user->email}}</h5>  
+    <p>Richiesta: {{$body}}</p>
     <a href="{{route('make.revisor',compact('user'))}}">Rendi revisore</a>
 </body>
 </html>

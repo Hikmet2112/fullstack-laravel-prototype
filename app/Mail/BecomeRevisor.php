@@ -18,11 +18,14 @@ class BecomeRevisor extends Mailable
     /**
      * Create a new message instance.
      */
-    public $user;
+    public $user; 
 
-    public function __construct(User $user)
+    public $body;
+
+    public function __construct(User $user,$body)
     {
-        $this->user = $user;
+        $this->user = $user; 
+        $this->body = $body;
     }
 
     /**
@@ -44,7 +47,7 @@ class BecomeRevisor extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail.becomeRevisor',
+            view: 'email.becomeRevisor',
         );
     }
 

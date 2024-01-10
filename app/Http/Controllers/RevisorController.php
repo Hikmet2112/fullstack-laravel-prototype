@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Article;
 use App\Mail\BecomeRevisor;
 use Illuminate\Http\Request;
@@ -41,18 +42,18 @@ class RevisorController extends Controller
 
   }  
 
-  public function becomeRevisor(){
+  public function becomeRevisor(Request $request){
 
-    Mail::to('hello@example.com')->send(new BecomeRevisor(Auth::use())); 
+    Mail::to('hello@example.com')->send(new BecomeRevisor(Auth::user(),$request->body)); 
 
-    return redirect()->back()->whith('message','Complimenti sei diventato revisore');
+    return redirect()->back()->with('message','Complimenti la tua richiesta è stata accolta');
   }
 
-  public function makeRevisor(){
+  public function makeRevisor(User $user){
 
     Artisan::call('presto:makeUserRevisor', ["email"=>$user->email]); 
 
-    return redirect('/')->whith('message','L\'utente è diventato revisore');
+    return redirect('/')->with('message','L\'utente è diventato revisore');
   }
 
   

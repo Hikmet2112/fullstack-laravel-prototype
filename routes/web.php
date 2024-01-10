@@ -35,7 +35,7 @@ Route::patch('/rifiuta/annuncio/{article}',[RevisorController::class,'rejectArti
 
 // RICHIEDI DI DIVENTARE REVISORE 
 
-Route::get('/richiesta/revisore',[RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');  
+Route::post('/richiesta/revisore',[RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');  
 
 // RENDI REVISORE 
 

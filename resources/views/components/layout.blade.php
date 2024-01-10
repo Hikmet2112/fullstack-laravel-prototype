@@ -10,8 +10,11 @@
 <body>
     <x-navbar></x-navbar>
 
-{{$slot}}
-   
+{{$slot}} 
+@auth
+   <x-form-work-us></x-form-work-us> 
+@endauth
+
 <x-footer></x-footer>
 
 
