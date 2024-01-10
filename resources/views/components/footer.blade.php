@@ -12,6 +12,10 @@
         <h4 class="text-center fw-bold">E-presto</h4>
         @endif
         @endauth
+
+        @guest
+        <p class="text-center">Vuoi diventare parte del nostro fantastico team dei Foul Stackers? Sei nel posto giusto!</p>
+        @endguest
       </div>
       <div class="col-10 d-flex justify-content-center">
         

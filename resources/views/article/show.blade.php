@@ -3,12 +3,12 @@
   <div class="row my-4">
     <div class="col-12 d-flex justify-content-center flex-column align-items-center">
         <h2 class="">{{$article->title}}</h2>
-        <h4 class="">{{$article->body}}</h4>
-        <p class="">{{$article->price}}</p>
+        <h4 class="">{{$article->price}} €</h4>
+        <p class="">{{$article->body}}</p>
     </div>
   </div>
 
-    <div class="container-fluid vh-100">
+    <div class="container-fluid vh-100 mb-5">
         <div class="row h-100">
             <div class="col-12 h-100 d-flex justify-content-center">
                 <div id="carouselExample" class="carousel slide">
