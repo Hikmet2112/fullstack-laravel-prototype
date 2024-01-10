@@ -59,3 +59,7 @@
 .decoration-none{
     text-decoration: none;
 }
+
+.small-text {
+    font-size: 13px;
+}

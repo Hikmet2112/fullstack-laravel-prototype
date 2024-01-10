@@ -17,9 +17,9 @@
   </div>
   
   @empty 
-  <div class="col-12">
-    <p>non sono presenti annunci in questa categoria!</p>
-    <a href="{{route('article.create')}}"><p>crea un nuovo articolo</p></a>
+  <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
+    <h2>Non sono presenti annunci in questa categoria!</h2>
+    <a href="{{route('article.create')}}"><p>Crea un nuovo articolo qui</p></a>
   </div>
   @endforelse
   

@@ -16,6 +16,9 @@
                         <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password">
                     </div>
                     <button type="submit" class="btn btn-primary">Accedi</button>
+                    <p class="my-3">
+                        Non sei registrato? Registrati <a href="{{route('register')}}">qui</a>
+                    </p>
                   </form>
             </div>
         </div>

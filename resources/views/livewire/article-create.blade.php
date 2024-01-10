@@ -25,14 +25,27 @@
             <div class="mb-3">
                 <label for="title" class="form-label">Nome prodotto</label>
                 <input type="text" wire:model.blur='title' class="form-control" id="title">
+                <ul class="small-text">
+                    <li><p class="m-0">Il campo è obbligatorio</p></li>
+                    <li><p class="m-0">Il campo deve contenere almeno 3 caratteri</p></li>
+                </ul>
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo</label>
                 <input type="number" wire:model.blur='price' class="form-control" id="price">
+                <ul class="small-text">
+                    <li><p class="m-0">Il campo è obbligatorio</p></li>
+                    <li><p class="m-0">Il campo non deve contenere più di 8 caratteri</p></li>
+                </ul>
             </div>
             <div class="d-flex flex-column mb-3">
                 <label for="body" class="form-label">Descrizione</label>
                 <textarea name="body" wire:model.blur='body' id="body" cols="40" rows="3"></textarea>
+                <ul class="small-text">
+                    <li><p class="m-0">Il campo è obbligatorio</p></li>
+                    <li><p class="m-0">Il campo deve contenere almeno 15 caratteri</p></li>
+                    <li><p class="m-0">Il campo non deve contenere più di 500 caratteri</p></li>
+                </ul>
             </div>
             <div class="mb-3">
 
@@ -47,6 +60,10 @@
                     @endforeach
                         
                 </select>
+
+                <ul class="small-text">
+                    <li><p class="m-0">Il campo è obbligatorio</p></li>
+                </ul>
                 
             </div>
             <button type="submit" class="btn btn-primary">Inserisci</button>
