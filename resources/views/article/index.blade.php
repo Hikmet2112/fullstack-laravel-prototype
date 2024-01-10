@@ -10,14 +10,23 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         
-        @foreach ($articles as $article)
+        @forelse ($articles as $article)
         
         <x-card-welcome 
         :article="$article"
         ></x-card-welcome>
+
+      
+        @empty
+        <div class="col-12">
+            <h2>Non ci sono articoli al momento</h2>
+            
+        </div>
+            
+      
         
-        
-        @endforeach
+        @endforelse
+        {{$articles->links()}}
         
         
         

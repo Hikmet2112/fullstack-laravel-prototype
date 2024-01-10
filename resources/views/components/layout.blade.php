@@ -9,6 +9,10 @@
 </head>
 <body>
     <x-navbar></x-navbar>
+    <x-search></x-search>
+
+    
+  
 
 {{$slot}} 
 @auth
