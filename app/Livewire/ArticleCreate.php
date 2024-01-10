@@ -24,7 +24,7 @@ class ArticleCreate extends Component
     protected $rules=[
 
         'title'=> 'required|min:3',
-        'price'=>'required!min:1',
+        'price'=>'required|min:1',
         'body'=>'required|min:15|max:500',
         'category'=>'required'
     ];

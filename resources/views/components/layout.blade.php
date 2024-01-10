@@ -8,8 +8,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
+    <x-main-navbar></x-main-navbar>
     <x-navbar></x-navbar>
-    <x-search></x-search>
+    
 
     
   
