@@ -6,7 +6,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Candidatura revisor: {{Auth::user()->name}}</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -31,10 +31,10 @@
 
                     <div class="mb-3">
                         <label for="body" class="form-label">Perchè vuoi lavorare con noi?</label>
-                        <textarea name="body" id="body" cols="50" rows="10"></textarea>
+                        <textarea name="body" id="body" cols="35" rows="7"></textarea>
                       </div>
                   <div>
-                     <button type="submit" class="btn btn-primary">Invia</button>
+                     <button type="submit" class="btn btn-canvas-cus">Invia candidatura</button>
                   </div>
                 
                     

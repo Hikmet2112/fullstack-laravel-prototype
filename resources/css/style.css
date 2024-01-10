@@ -1,16 +1,25 @@
+:root{
+    --blackCus: #212529;
+    --whiteCus: #e9ecef;
+    --greyCus: #adb5bd;
+}
+
+body{
+    background-color: var(--whiteCus);
+}
+
 .UserImg {
 
-    width: 250px;
-    height: 250px;
-    border: solid 2px rgb(234, 229, 229);
+    width: 200px;
+    height: 200px;
+    border: solid 3px var(--whiteCus);
     border-radius: 50%;
-
 
 }
 
 .dropdown-menu {
 
-    background-color: #212121;
+    background-color: var(--blackCus);
     border: none;
 
 
@@ -18,13 +27,13 @@
 
 .offcanvas {
 
-    background-color: #212121 !important;
+    background-color: var(--blackCus) !important;
 
 }
 
 .navbar-toggler {
 
-    border: solid 1px whitesmoke;
+    border: solid 1px var(--whiteCus);
 
 }
 
@@ -43,15 +52,15 @@
 
 .category-nav-link{
     border-radius: 15px;
-    border: solid 1px black;
-    box-shadow: 2px 2px black;
+    border: solid 1px var(--blackCus);
+    box-shadow: 2px 2px var(--blackCus);
     padding: 15px;
     transition: 0.4s;
 }
 
 .category-nav-link:hover{
     border-radius: 15px;
-    border: solid 1px black;
+    border: solid 1px var(--blackCus);
     padding: 15px;
     transform: scale(1.1);
 }
@@ -62,4 +71,79 @@
 
 .small-text {
     font-size: 13px;
+}
+
+.contenitore-navbar {
+    background-color: var(--blackCus);
+    height: 65px;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+}
+
+.badge-custom {
+    position: absolute;
+    left: 6px;
+}
+
+.badge-custom:hover{
+    position: absolute;
+    left: 6px;
+}
+
+.separator-right{
+    border-right: 1px solid var(--whiteCus);
+    padding-right: 20px;
+}
+
+.bg-collapse {
+    background-color: var(--blackCus);
+}
+
+/* .card{
+    text-shadow: 50px 50px var(--blackCus);
+} */
+
+.hr{
+    border-bottom: 1px solid var(--greyCus);
+    width: 90%;
+}
+
+.gradient-footer {
+    background-color: var(--blackCus);
+    color: var(--whiteCus);
+}
+
+.btn-canvas-cus{
+    background-color: var(--blackCus);
+    color: var(--whiteCus);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.btn-canvas-cus:hover{
+    background-color: var(--whiteCus);
+    color: var(--blackCus);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.resolve-main-navbar{
+    height: 70px;
+}
+
+.border-none{
+    border: none !important;
+}
+
+.border-none:hover{
+    border: none !important;
+}
+
+@media only screen and (max-width: 990px) {
+    .separator-right{
+        border-right: 0px solid var(--whiteCus);
+        padding-right: 20px;
+    }
 }

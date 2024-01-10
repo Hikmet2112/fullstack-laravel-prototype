@@ -31,7 +31,7 @@
                     <label for="password_confirmation" class="form-label">Conferma password</label>
                     <input type="password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" id="password_confirmation">
                 </div>
-                <button type="submit" class="btn btn-primary">Registrati</button>
+                <button type="submit" class="btn btn-dark">Registrati</button>
               </form>
         </div>
     </div>

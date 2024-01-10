@@ -78,7 +78,7 @@ class ArticleCreate extends Component
         //     'name'=>$this->name
         // ]);
       
-        session()->flash('message' , 'articolo inserito correttamente') ;
+        session()->flash('message' , 'Articolo mandato in revisione correttamente') ;
 
         $this->reset(); 
 

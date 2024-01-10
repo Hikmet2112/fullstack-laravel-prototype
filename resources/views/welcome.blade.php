@@ -1,3 +1,4 @@
+
 <x-layout>
     
     {{-- Category nav --}}

@@ -1,11 +1,4 @@
 
-<a class="btn m-4 btn-cus-nav"  data-bs-toggle="offcanvas" href="#offcanvasDark" role="button" aria-controls="offcanvasExample">
-  <i class="fa-solid fa-bars fs-5"></i>
-</a> 
-
-
-
-
 <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
   <div class="d-flex justify-content-end m-3"><button type="button" class="btn-close btn-close-white  " data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
   @auth
@@ -22,7 +15,7 @@
   <div class="offcanvas-body">
     <nav class="navbar navbar-expand-lg bg-body-trasparent">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">E-presto</a>
+        <a class="navbar-brand text-white" href="{{route('homepage')}}">E-presto</a>
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span><i class="fa-solid fa-ellipsis fs-5 text-white"></i></span>
         </button>
@@ -31,34 +24,20 @@
             {{-- <li class="nav-item">
               <a class="nav-link active text-white" aria-current="page" href="{{route('homepage')}}"><i class="fa-solid fa-house fs-5"></i></a>
             </li> --}}
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link text-white" href="{{route('article.index')}}">Tutti gl'articoli</a>
-            </li>
+            </li> --}}
             @auth 
             
-            @if(Auth::user()->is_revisor) 
-            <li class="nav-item">
-              <a class="nav-link text-white btn btn-danger"  href="{{route('revisor.index')}}">Revisore
-                
-                <span class="position-absolute top-0 start-75 translate-middle badge rounded-pill bg-danger"> 
-                  
-                  {{App\Models\Article::toBeRevisionedCount()}}
-                  
-                  <span class="visually-hidden">Unread messages</span>
-                </span>
-              </a> 
-            </li>
             
-            
-            @endif
-            <li class="nav-item dropdown custom ">
+            <li class="nav-item dropdown custom">
               <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-regular fa-user fs-5"></i> {{Auth::user()->name}}</a>
               
               
               
               <ul class="dropdown-menu">
                 <li>
-                  <form class="d-flex justify-content-start  " method="POST" action="{{route('logout')}}">
+                  <form class="d-flex justify-content-start" method="POST" action="{{route('logout')}}">
                     @csrf
                     <button class="d-flex justify-content-center btn btn-danger rounded-5" type="submit">Logout</button>
                   </form>

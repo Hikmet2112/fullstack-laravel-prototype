@@ -66,7 +66,7 @@
                 </ul>
                 
             </div>
-            <button type="submit" class="btn btn-primary">Inserisci</button>
+            <button type="submit" class="btn-canvas-cus">Inserisci</button>
         </form>
     </div>
     
