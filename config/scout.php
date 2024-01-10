@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+    
     /*
     |--------------------------------------------------------------------------
     | Default Search Engine
@@ -15,9 +15,9 @@ return [
     |            "database", "collection", "null"
     |
     */
-
+    
     'driver' => env('SCOUT_DRIVER', 'tntsearch'),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Index Prefix
@@ -28,9 +28,9 @@ return [
     | "tenants" or applications sharing the same search infrastructure.
     |
     */
-
+    
     'prefix' => env('SCOUT_PREFIX', ''),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Queue Data Syncing
@@ -41,9 +41,9 @@ return [
     | all automatic data syncing will get queued for better performance.
     |
     */
-
+    
     'queue' => env('SCOUT_QUEUE', false),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Database Transactions
@@ -54,9 +54,9 @@ return [
     | been committed, thus preventing any discarded data from syncing.
     |
     */
-
+    
     'after_commit' => false,
-
+    
     /*
     |--------------------------------------------------------------------------
     | Chunk Sizes
@@ -67,12 +67,12 @@ return [
     | tune each of these chunk sizes based on the power of the servers.
     |
     */
-
+    
     'chunk' => [
         'searchable' => 500,
         'unsearchable' => 500,
     ],
-
+    
     /*
     |--------------------------------------------------------------------------
     | Soft Deletes
@@ -83,9 +83,9 @@ return [
     | if your application still needs to search for the records later.
     |
     */
-
+    
     'soft_delete' => false,
-
+    
     /*
     |--------------------------------------------------------------------------
     | Identify User
@@ -98,9 +98,9 @@ return [
     | Supported engines: "algolia"
     |
     */
-
+    
     'identify' => env('SCOUT_IDENTIFY', false),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Algolia Configuration
@@ -111,26 +111,26 @@ return [
     | in your application ID and admin API key to get started searching.
     |
     */
-
+    
     'algolia' => [
         'id' => env('ALGOLIA_APP_ID', ''),
         'secret' => env('ALGOLIA_SECRET', ''),
     ],
     
-'tntsearch' => [
-    'storage'  => storage_path(), //place where the index files will be stored
-    'fuzziness' => env('TNTSEARCH_FUZZINESS', false),
-    'fuzzy' => [
-        'prefix_length' => 0,
-        'max_expansions' => 50,
-        'distance' => 0,
-	'no_limit' => true
+    'tntsearch' => [
+        'storage'  => storage_path(), //place where the index files will be stored
+        'fuzziness' => env('TNTSEARCH_FUZZINESS', false),
+        'fuzzy' => [
+            'prefix_length' => 0,
+            'max_expansions' => 50,
+            'distance' => 0,
+            'no_limit' => true
+        ],
+        'asYouType' => false,
+        'searchBoolean' => env('TNTSEARCH_BOOLEAN', false),
+        'maxDocs' => env('TNTSEARCH_MAX_DOCS', 500),
     ],
-    'asYouType' => false,
-    'searchBoolean' => env('TNTSEARCH_BOOLEAN', false),
-    'maxDocs' => env('TNTSEARCH_MAX_DOCS', 500),
-],
-
+    
     /*
     |--------------------------------------------------------------------------
     | Meilisearch Configuration
@@ -143,74 +143,75 @@ return [
     | See: https://www.meilisearch.com/docs/learn/configuration/instance_options#all-instance-options
     |
     */
-
+    
     'meilisearch' => [
         'host' => env('MEILISEARCH_HOST', 'http://localhost:7700'),
         'key' => env('MEILISEARCH_KEY'),
         'index-settings' => [
             // 'users' => [
-            //     'filterableAttributes'=> ['id', 'name', 'email'],
-            // ],
+                //     'filterableAttributes'=> ['id', 'name', 'email'],
+                // ],
+            ],
         ],
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Typesense Configuration
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure your Typesense settings. Typesense is an open
-    | source search engine using minimal configuration. Below, you will
-    | state the host, key, and schema configuration for the instance.
-    |
-    */
-
-    'typesense' => [
-        'client-settings' => [
-            'api_key' => env('TYPESENSE_API_KEY', 'xyz'),
-            'nodes' => [
-                [
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Typesense Configuration
+        |--------------------------------------------------------------------------
+        |
+        | Here you may configure your Typesense settings. Typesense is an open
+        | source search engine using minimal configuration. Below, you will
+        | state the host, key, and schema configuration for the instance.
+        |
+        */
+        
+        'typesense' => [
+            'client-settings' => [
+                'api_key' => env('TYPESENSE_API_KEY', 'xyz'),
+                'nodes' => [
+                    [
+                        'host' => env('TYPESENSE_HOST', 'localhost'),
+                        'port' => env('TYPESENSE_PORT', '8108'),
+                        'path' => env('TYPESENSE_PATH', ''),
+                        'protocol' => env('TYPESENSE_PROTOCOL', 'http'),
+                    ],
+                ],
+                'nearest_node' => [
                     'host' => env('TYPESENSE_HOST', 'localhost'),
                     'port' => env('TYPESENSE_PORT', '8108'),
                     'path' => env('TYPESENSE_PATH', ''),
                     'protocol' => env('TYPESENSE_PROTOCOL', 'http'),
                 ],
+                'connection_timeout_seconds' => env('TYPESENSE_CONNECTION_TIMEOUT_SECONDS', 2),
+                'healthcheck_interval_seconds' => env('TYPESENSE_HEALTHCHECK_INTERVAL_SECONDS', 30),
+                'num_retries' => env('TYPESENSE_NUM_RETRIES', 3),
+                'retry_interval_seconds' => env('TYPESENSE_RETRY_INTERVAL_SECONDS', 1),
             ],
-            'nearest_node' => [
-                'host' => env('TYPESENSE_HOST', 'localhost'),
-                'port' => env('TYPESENSE_PORT', '8108'),
-                'path' => env('TYPESENSE_PATH', ''),
-                'protocol' => env('TYPESENSE_PROTOCOL', 'http'),
-            ],
-            'connection_timeout_seconds' => env('TYPESENSE_CONNECTION_TIMEOUT_SECONDS', 2),
-            'healthcheck_interval_seconds' => env('TYPESENSE_HEALTHCHECK_INTERVAL_SECONDS', 30),
-            'num_retries' => env('TYPESENSE_NUM_RETRIES', 3),
-            'retry_interval_seconds' => env('TYPESENSE_RETRY_INTERVAL_SECONDS', 1),
-        ],
-        'model-settings' => [
-            // User::class => [
-            //     'collection-schema' => [
-            //         'fields' => [
-            //             [
-            //                 'name' => 'id',
-            //                 'type' => 'string',
-            //             ],
-            //             [
-            //                 'name' => 'name',
-            //                 'type' => 'string',
-            //             ],
-            //             [
-            //                 'name' => 'created_at',
-            //                 'type' => 'int64',
-            //             ],
-            //         ],
-            //         'default_sorting_field' => 'created_at',
-            //     ],
-            //     'search-parameters' => [
-            //         'query_by' => 'name'
-            //     ],
-            // ],
-        ],
-    ],
-
-];
+            'model-settings' => [
+                // User::class => [
+                    //     'collection-schema' => [
+                        //         'fields' => [
+                            //             [
+                                //                 'name' => 'id',
+                                //                 'type' => 'string',
+                                //             ],
+                                //             [
+                                    //                 'name' => 'name',
+                                    //                 'type' => 'string',
+                                    //             ],
+                                    //             [
+                                        //                 'name' => 'created_at',
+                                        //                 'type' => 'int64',
+                                        //             ],
+                                        //         ],
+                                        //         'default_sorting_field' => 'created_at',
+                                        //     ],
+                                        //     'search-parameters' => [
+                                            //         'query_by' => 'name'
+                                            //     ],
+                                            // ],
+                                        ],
+                                    ],
+                                    
+                                ];
+                                

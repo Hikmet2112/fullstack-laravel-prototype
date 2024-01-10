@@ -26,7 +26,7 @@
       
         
         @endforelse
-        {{$articles->links()}}
+        {{-- {{$articles->links()}} --}}
         
         
         
