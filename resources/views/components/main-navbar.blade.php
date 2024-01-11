@@ -1,8 +1,10 @@
 <nav class="navbar navbar-expand-lg contenitore-navbar">
-  <div class="container-fluid bg-collapse">
+  <div class="container-fluid bg-collapse"> 
+    @auth
     <a class="btn btn-cus-nav" data-bs-toggle="offcanvas" href="#offcanvasDark" role="button" aria-controls="offcanvasExample">
       <i class="fa-solid fa-circle-user fa-xl text-white"></i>
     </a>
+    @endauth
     <a class="navbar-brand text-white ms-3 me-5 pe-5" href="{{route('homepage')}}">E-presto</a>
     <button class="navbar-toggler border-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-xl text-white"></i></span>

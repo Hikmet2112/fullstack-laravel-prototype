@@ -31,7 +31,7 @@
 
                     <div class="mb-3">
                         <label for="body" class="form-label">Perchè vuoi lavorare con noi?</label>
-                        <textarea name="body" id="body" cols="35" rows="7"></textarea>
+                        <textarea class="form-control"  name="body" id="body" cols="35" rows="7"></textarea>
                       </div>
                   <div>
                      <button type="submit" class="btn btn-canvas-cus">Invia candidatura</button>

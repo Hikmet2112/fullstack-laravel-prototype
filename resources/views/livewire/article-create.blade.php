@@ -40,7 +40,7 @@
             </div>
             <div class="d-flex flex-column mb-3">
                 <label for="body" class="form-label">Descrizione</label>
-                <textarea name="body" wire:model.blur='body' id="body" cols="40" rows="3"></textarea>
+                <textarea class="form-control" name="body" wire:model.blur='body' id="body" cols="40" rows="3"></textarea>
                 <ul class="small-text">
                     <li><p class="m-0">Il campo è obbligatorio</p></li>
                     <li><p class="m-0">Il campo deve contenere almeno 15 caratteri</p></li>
