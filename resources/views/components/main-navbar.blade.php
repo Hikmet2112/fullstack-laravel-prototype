@@ -22,9 +22,11 @@
           <a class="nav-link text-white" href="{{route('article.index')}}">Articoli</a>
         </li>
         @auth
+        @if(Auth::user()->is_revisor)
         <li class="nav-item">
           <a class="nav-link text-white" aria-current="page" href="{{route('revisor.index')}}"><i class="fa-solid fa-check fa-xl"></i></a>
         </li>
+        @endif
         <li class="nav-item">
           @if(Auth::user()->is_revisor) 
           <li class="nav-item">
