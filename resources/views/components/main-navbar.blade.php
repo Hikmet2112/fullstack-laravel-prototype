@@ -16,13 +16,17 @@
         </li>
         <li class="nav-item pe-3 separator-right">
           <a class="nav-link text-white" aria-current="page" href="{{route('homepage')}}">Home</a>
-        </li>
+        </li>  
+      
+    
         <li class="nav-item ms-3 p-0">
           <a class="nav-link text-white" aria-current="page" href="{{route('article.index')}}"><i class="fa-solid fa-book fa-xl"></i></a>
         </li>
         <li class="nav-item @auth @if(Auth::user()->is_revisor) separator-right @endif @endauth me-3">
           <a class="nav-link text-white" href="{{route('article.index')}}">Articoli</a>
         </li>
+     
+        
         @auth
         @if(Auth::user()->is_revisor)
         <li class="nav-item">
@@ -50,6 +54,16 @@
         </li>
         @endauth
       </ul>
+      <li class="nav-item">
+        <x-_locale lang="it"></x-_locale>
+      </li>
+      <li class="nav-item">
+        <x-_locale lang="en"></x-_locale>
+      </li>
+      <li class="nav-item">
+        <x-_locale lang="fr"></x-_locale>
+      </li>
+  
       <form class="d-flex bg-collapse me-3" action="{{route('articles.search')}}" method="GET" role="search">
         <input name="searched" id="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-light" type="submit">Cerca</button>

@@ -27,4 +27,10 @@ class PublicController extends Controller
 
         return view('article.index',compact('articles'));
     }
+
+    public function setLocale($lang){
+
+        session()->put('locale',$lang);
+        return redirect()->back();
+    }
 }

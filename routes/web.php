@@ -22,6 +22,9 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/ricerca/annuncio',[PublicController::class,'SearchArticles'])->name('articles.search');   
 
 Route::get('/category/{category}',[PublicController::class, 'categoryShow'])->name('categoryShow');
+//Rotta per bandiere
+
+Route::post('/lingua/{lang}',[PublicController::class,'setLocale'])->name('setLocale');  
 
 //ROTTE ARTICLE
 Route::resource('article', ArticleController::class); 
@@ -43,6 +46,9 @@ Route::post('/richiesta/revisore',[RevisorController::class,'becomeRevisor'])->m
 // RENDI REVISORE 
 
 Route::get('/rendi/revisore/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');   
+
+
+
 
 
 
