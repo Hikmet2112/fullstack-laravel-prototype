@@ -15,7 +15,7 @@
         </div>
         @endif
 
-        <form enctype="multipart/form-data" class="p-4 border-4 shadow rounded" wire:submit="articleStore">
+        <form enctype="multipart/form-data" class="p-4 border-4 shadow rounded" wire:submit="articleStore"  wire:submit="save">
             
             {{-- <div class="mb-3">
                 <label for="img" class="form-label"> Allega file</label>
@@ -38,6 +38,41 @@
                     <li><p class="m-0">Il campo non deve contenere più di 8 caratteri</p></li>
                 </ul>
             </div>
+            <div>
+                <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" 
+                    placeholder="immagine">
+                 @error('temporary_images.*')
+                    <p class="text-danger mt-2">{{$message}}</p>
+
+                 @enderror
+
+            </div>
+            @if(!empty($images))
+            
+                <div class="row">
+                    <div class="col-12">
+                        <p>Anteprima foto:</p>
+                        <div class="row border border-4 border-info rounded shadow pt-4">
+                            @foreach($images as $key => $image)
+                            <div class="col  my-3">
+                                
+                                <div class="img-preview d-flex justify-content-center rounded">  
+                                    
+                                    @if ($image) 
+                                    <img class="" src="{{ $image->temporaryUrl() }}">
+                                    @endif
+                                
+                                </div>
+                                <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Elimina</button>
+                                {{-- @dd($image); --}}
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            
+            @endif
+           
             <div class="d-flex flex-column mb-3">
                 <label for="body" class="form-label">Descrizione</label>
                 <textarea class="form-control" name="body" wire:model.blur='body' id="body" cols="40" rows="3"></textarea>
@@ -66,7 +101,7 @@
                 </ul>
                 
             </div>
-            <button type="submit" class="btn-canvas-cus">Inserisci</button>
+            <button  type="submit" class="btn-canvas-cus">Inserisci</button>
         </form>
     </div>
     

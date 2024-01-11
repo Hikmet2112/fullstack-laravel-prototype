@@ -5,11 +5,17 @@ namespace App\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+
+
+
 
 class ArticleCreate extends Component
 {
     // public $img;
+    use WithFileUploads;
+
     public $title;
     public $price;
     public $body;
@@ -17,6 +23,9 @@ class ArticleCreate extends Component
     public $category;
     public $category_id;
     public $article;
+    public $images=[];
+    public $image;
+    public $temporary_images;
     
 
     public $categoryChecks = [];
@@ -26,7 +35,10 @@ class ArticleCreate extends Component
         'title'=> 'required|min:3',
         'price'=>'required|min:1',
         'body'=>'required|min:15|max:500',
-        'category'=>'required'
+        'category'=>'required',
+        'images.*'=>'image|max:2048',
+        'temporary_images.*'=>'image|max:2048',
+
     ];
     protected $messages=[
         
@@ -36,8 +48,54 @@ class ArticleCreate extends Component
         'category.required'=> 'La categoria è obbligatoria',
         'title.min'=> 'Il titolo deve contenere almeno 3 caratteri',
         'body.min'=> 'Il corpo del testo deve contenere almeno 15 caratteri',
-        'body.max'=> 'Il corpo del testo non deve contenere più di 500 caratteri'
+        'body.max'=> 'Il corpo del testo non deve contenere più di 500 caratteri',
+        'temporary_images.*.image'=>'Il file deve essere una immagine ',
+        'temporary_images.*.max'=>'Il file deve avere una grandezza massima di: 2 Mb',
+        'images.*.image'=>'Il file deve essere una immagine ',
+        'images.*.max'=>'Il file deve avere una grandezza massima di: 2 Mb',
+
     ];
+
+    public function updatedTemporaryImages(){
+
+        if($this->validate(['temporary_images.*'=>'image|max:2048',])){
+
+            foreach($this->temporary_images as $image){
+
+                $this->images[]=$image;
+            }
+
+        }
+
+
+    }
+
+    public function removeImage($key){
+
+        if (in_array($key, array_keys($this->images)))
+        {unset($this->images[$key]);}
+
+    }
+
+
+    public function store(){
+
+        $this->validate();
+        $this->article=Category::find($this->category)->articles()->create($this->validate());
+        if(count($this->images)){
+
+            foreach($this->images as $image)
+            {
+                $this->article->images()->create(['path'=>$image->store('images')]);
+                
+                   
+               
+            }
+
+
+        }
+
+    }
 
 
     

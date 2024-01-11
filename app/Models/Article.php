@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\User;
+use App\Models\Image;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
@@ -53,4 +54,12 @@ class Article extends Model
 
         return Article::where('is_accepted',null)->count();
     } 
+
+
+    public function images(){
+
+        return $this->hasMany(Image::class); 
+
+    }
 }
+
