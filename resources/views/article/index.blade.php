@@ -1,10 +1,8 @@
 <x-layout> 
     
     <x-category-navbar></x-category-navbar>
-    
-    <x-masthead
-    title="I nostri annunci"
-    ></x-masthead> 
+    <x-masthead title='I nostri annunci'></x-masthead>
+
     
     
     <div class="container-fluid">

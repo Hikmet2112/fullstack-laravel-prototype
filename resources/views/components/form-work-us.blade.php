@@ -6,7 +6,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Candidatura revisor: {{Auth::user()->name}}</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">{{__('ui.titleModal')}} {{Auth::user()->name}}</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -20,21 +20,21 @@
                     @csrf 
                     
                     <div class="mb-3">
-                      <label for="name" class="form-label">Nome Utente</label>
+                      <label for="name" class="form-label">{{__('ui.username')}}</label>
                       <input type="text" disabled name="name" class="form-control @error('name') is-invalid @enderror" value="{{Auth::user()->name}}" id="name">
                     </div>
 
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email Utente</label>
+                        <label for="email" class="form-label">{{__('ui.userEmail')}}</label>
                         <input type="email" disabled name="email" class="form-control @error('email') is-invalid @enderror" value="{{Auth::user()->email}}" id="email">
                     </div> 
 
                     <div class="mb-3">
-                        <label for="body" class="form-label">Perchè vuoi lavorare con noi?</label>
+                        <label for="body" class="form-label">{{__('ui.textQuestion')}}</label>
                         <textarea class="form-control"  name="body" id="body" cols="35" rows="7"></textarea>
                       </div>
                   <div>
-                     <button type="submit" class="btn btn-canvas-cus">Invia candidatura</button>
+                     <button type="submit" class="btn btn-canvas-cus">{{__('ui.sendApplication')}}</button>
                   </div>
                 
                     

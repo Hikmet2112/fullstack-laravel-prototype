@@ -4,7 +4,8 @@
     {{-- Category nav --}}
     <x-category-navbar></x-category-navbar>
 
-<x-masthead title='E-presto'></x-masthead>
+  <x-masthead title='E-presto'></x-masthead>
+
 
 
 <div class="container-fluid">

@@ -23,7 +23,7 @@
           <a class="nav-link text-white" aria-current="page" href="{{route('article.index')}}"><i class="fa-solid fa-book fa-xl"></i></a>
         </li>
         <li class="nav-item @auth @if(Auth::user()->is_revisor) separator-right @endif @endauth me-3">
-          <a class="nav-link text-white" href="{{route('article.index')}}">Articoli</a>
+          <a class="nav-link text-white" href="{{route('article.index')}}">{{__('ui.articles')}}</a>
         </li>
      
         
@@ -37,7 +37,7 @@
           @if(Auth::user()->is_revisor) 
           <li class="nav-item">
             {{-- <span class="bg-info"><i class="fa-solid fa-check fa-2xl text-white"></i></span> --}}
-            <a class="nav-link text-white btn"  href="{{route('revisor.index')}}">Revisione
+            <a class="nav-link text-white btn"  href="{{route('revisor.index')}}">{{__('ui.reviewer')}}
               @if (App\Models\Article::toBeRevisionedCount() == 0)
               
               @else    
@@ -65,8 +65,8 @@
       </li>
   
       <form class="d-flex bg-collapse me-3" action="{{route('articles.search')}}" method="GET" role="search">
-        <input name="searched" id="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Cerca</button>
+        <input name="searched" id="searched" class="form-control me-2" type="search" placeholder="{{__('ui.buttonSearch')}}" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">{{__('ui.buttonSearch')}}</button>
       </form>
     </div>
   </div>
