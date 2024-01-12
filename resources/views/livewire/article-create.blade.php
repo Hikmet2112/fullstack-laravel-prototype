@@ -15,7 +15,7 @@
         </div>
         @endif
 
-        <form enctype="multipart/form-data" class="p-4 border-4 shadow rounded" wire:submit="articleStore"  wire:submit="save">
+        <form enctype="multipart/form-data" class="p-4 border-4 shadow rounded" wire:submit="articleStore">
             
             {{-- <div class="mb-3">
                 <label for="img" class="form-label"> Allega file</label>
@@ -32,7 +32,7 @@
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo</label>
-                <input type="number" wire:model.blur='price' class="form-control" id="price">
+                <input type="number" step="0.01" wire:model.blur='price' class="form-control" id="price">
                 <ul class="small-text">
                     <li><p class="m-0">Il campo è obbligatorio</p></li>
                     <li><p class="m-0">Il campo non deve contenere più di 8 caratteri</p></li>
@@ -64,7 +64,7 @@
                                 
                                 </div>
                                 <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Elimina</button>
-                                {{-- @dd($image); --}}
+                                
                             </div>
                             @endforeach
                         </div>

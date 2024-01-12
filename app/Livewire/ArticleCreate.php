@@ -33,7 +33,7 @@ class ArticleCreate extends Component
     protected $rules=[
 
         'title'=> 'required|min:3',
-        'price'=>'required|min:1',
+        'price'=>'required|max:10',
         'body'=>'required|min:15|max:500',
         'category'=>'required',
         'images.*'=>'image|max:2048',
@@ -53,6 +53,7 @@ class ArticleCreate extends Component
         'temporary_images.*.max'=>'Il file deve avere una grandezza massima di: 2 Mb',
         'images.*.image'=>'Il file deve essere una immagine ',
         'images.*.max'=>'Il file deve avere una grandezza massima di: 2 Mb',
+        'price.max'=>'Il prezzo non deve superare le 9 cifre'
 
     ];
 
@@ -78,24 +79,12 @@ class ArticleCreate extends Component
     }
 
 
-    public function store(){
+    // public function store(){
 
-        $this->validate();
-        $this->article=Category::find($this->category)->articles()->create($this->validate());
-        if(count($this->images)){
-
-            foreach($this->images as $image)
-            {
-                $this->article->images()->create(['path'=>$image->store('images')]);
-                
-                   
-               
-            }
-
-
-        }
-
-    }
+    //     $this->validate();
+    //     $this->article = Category::find($this->category)->articles()->create($this->validate());
+        
+    // }
 
 
     
@@ -113,8 +102,16 @@ class ArticleCreate extends Component
             'title'=>$this->title,
             'price'=>$this->price,
             'body'=>$this->body,
-            'user_id'=>Auth::user()->id,
+            'user_id'=>Auth::user()->id
         ]);
+
+        if(count($this->images)){
+
+            foreach($this->images as $image)
+            {
+                $this->article->images()->create(['path'=>$image->store('public/image')]);
+            }
+        }
 
         $this->article->user()->associate(Auth::user());
 

@@ -32,6 +32,9 @@
                     <input type="password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" id="password_confirmation">
                 </div>
                 <button type="submit" class="btn btn-dark">Registrati</button>
+                <p class="my-3">
+                    Hai già un account? Fai il login <a href="{{route('login')}}">qui</a>
+                </p>
               </form>
         </div>
     </div>

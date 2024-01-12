@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->decimal('price',7,2);
+            $table->decimal('price', 9, 2);
             $table->text('body');
-            // $table->strin('img'->default('https://picsum.photos/200'));
             $table->timestamps();
         });
     }

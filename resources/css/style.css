@@ -39,16 +39,8 @@ body{
 
 
 .img-custom {
-    width: 100% !important;
-
+    width: 100%;
 }
-
-.h-carousel {
-    height: 100%;
-    width: 100vh;
-    overflow: hidden;
-}
-
 
 .category-nav-link{
     border-radius: 15px;
