@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 
@@ -109,8 +110,15 @@ class ArticleCreate extends Component
 
             foreach($this->images as $image)
             {
-                $this->article->images()->create(['path'=>$image->store('public/image')]);
+                // $this->article->images()->create(['path'=>$image->store('public/image')]);
+
+                $newFileName= "articles/{$this->article->id}";
+                $newImage= $this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
+
+                dispatch(new ResizeImage($newImage->path , 400 , 300));
             }
+
+            File::deletedirectory(storage_path('/app/livewire-tmp'));
         }
 
         $this->article->user()->associate(Auth::user());
