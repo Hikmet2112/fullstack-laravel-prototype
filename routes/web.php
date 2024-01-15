@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RevisorController;
 
 /*
@@ -41,15 +42,12 @@ Route::patch('/rifiuta/annuncio/{article}',[RevisorController::class,'rejectArti
 
 // RICHIEDI DI DIVENTARE REVISORE 
 
-Route::post('/richiesta/revisore',[RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');  
+Route::post('/richiesta/revisore',[RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 // RENDI REVISORE 
 
-Route::get('/rendi/revisore/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');   
+Route::get('/rendi/revisore/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor'); 
 
+// ROTTA PER LA MODALE PER INSERIRE PROFILO UTENTE
 
-
-
-
-
-
+Route::post('/profile/store',[ProfileController::class,'store'])->middleware('auth')->name('profile-img-store');

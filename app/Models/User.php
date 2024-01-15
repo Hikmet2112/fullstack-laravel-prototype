@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Article;
+use App\Models\Profile;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -21,7 +22,8 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password'
+        'password',
+        'user_image'
     ];
 
     /**
@@ -47,5 +49,9 @@ class User extends Authenticatable
     public function articles()
     {
         return $this->hasMany(Article::class);
+    }
+
+    public function profile() {
+        return $this->belongsTo(Profile::class);
     }
 }

@@ -2,7 +2,11 @@
 <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
   <div class="d-flex justify-content-end m-3"><button type="button" class="btn-close btn-close-white  " data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
   @auth
-  <div class="d-flex justify-content-center"><img class="UserImg my-4" src="https://picsum.photos/200" alt=""></div>
+  <div class="d-flex justify-content-center"><img class="UserImg my-4" src="https://picsum.photos/200" alt="Immagine utente"></div>
+  {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="fa-solid fa-user-pen fa-2xl m-5"></i>
+  </button> --}}
+
   @endauth
   <div class="offcanvas-header d-flex justify-content-center mb-3"> 
     @auth

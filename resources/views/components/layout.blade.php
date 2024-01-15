@@ -9,9 +9,14 @@
 </head>
 <body>
     <x-main-navbar></x-main-navbar>
- 
+
     <div class="resolve-main-navbar"></div>
     <x-navbar></x-navbar>
+
+    <x-profile-img-modal></x-profile-img-modal>
+
+
+    
     
 
     

@@ -4,14 +4,14 @@
     <div class="row justify-content-center">
 
         <div class="col-12 col-md-6">
-            <form method="POST" action="{{route('register')}}" class="p-4  my-5 rounded-4">
+            <form enctype="multipart/form-data" method="POST" action="{{route('register')}}" class="p-4  my-5 rounded-4">
                 @csrf
                 <div class="mb-3">
                   <label for="name" class="form-label">{{__('ui.nomeUtente')}}</label>
                   <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{old('name')}}" id="name">
                   <ul class="small-text">
                     <li><p class="m-0 fst-italic">{{__('ui.titleObbligatory')}}</p></li>
-                </ul>
+                    </ul>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">{{__('ui.userEmail')}}</label>
