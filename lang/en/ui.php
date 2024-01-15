@@ -108,6 +108,13 @@ return[
 
   'buttonReject'=>'Reject',
 
+     //Revisor controller
+
+     'acceptArticle'=>'Advertisement accepted',
+
+     'rejectArticle'=>'Ad rejected',
+     
+
 
    
 

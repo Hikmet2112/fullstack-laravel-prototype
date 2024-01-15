@@ -104,6 +104,12 @@ return[
   'buttonAccept'=>'Accetta',
 
   'buttonReject'=>'Rifiuta',
+
+  //Revisor controller
+
+  'acceptArticle'=>'Annuncio accettato',
+
+  'rejectArticle'=>'Annuncio rifiutato',
   
 
 

@@ -28,7 +28,7 @@ class RevisorController extends Controller
 
     $article->setAccepted(true); 
 
-    return redirect()->back()->with('message','Annuncio accettato'); 
+    return redirect()->back()->with('message',__('ui.acceptArticle')); 
 
 
   }  
@@ -37,7 +37,7 @@ class RevisorController extends Controller
 
     $article->setAccepted(false); 
 
-    return redirect()->back()->with('message','Annuncio rifiutato'); 
+    return redirect()->back()->with('message',__('ui.rejectArticle')); 
 
 
   }  
