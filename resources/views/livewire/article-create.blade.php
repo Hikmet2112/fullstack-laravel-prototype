@@ -26,16 +26,16 @@
                 <label for="title" class="form-label">{{__('ui.nameArticle')}}</label>
                 <input type="text" wire:model.blur='title' class="form-control" id="title">
                 <ul class="small-text">
-                    <li><p class="m-0">{{__('ui.titleObbligatory')}}</p></li>
-                    <li><p class="m-0">{{__('ui.campObbligatory')}}</p></li>
+                    <li><p class="m-0 fst-italic">{{__('ui.titleObbligatory')}}</p></li>
+                    <li><p class="m-0 fst-italic">{{__('ui.campObbligatory')}}</p></li>
                 </ul>
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">{{__('ui.price')}}</label>
                 <input type="number" step="0.01" wire:model.blur='price' class="form-control" id="price">
                 <ul class="small-text">
-                    <li><p class="m-0">{{__('ui.titleObbligatory')}}</p></li>
-                    <li><p class="m-0">{{__('ui.obbligatoryCamp')}}</p></li>
+                    <li><p class="m-0 fst-italic">{{__('ui.titleObbligatory')}}</p></li>
+                    <li><p class="m-0 fst-italic">{{__('ui.obbligatoryCamp')}}</p></li>
                 </ul>
             </div>
             <div>
@@ -77,9 +77,9 @@
                 <label for="body" class="form-label">{{__('ui.description')}}</label>
                 <textarea class="form-control" name="body" wire:model.blur='body' id="body" cols="40" rows="3"></textarea>
                 <ul class="small-text">
-                    <li><p class="m-0">{{__('ui.titleObbligatory')}}</p></li>
-                    <li><p class="m-0">{{__('ui.required1')}}</p></li>
-                    <li><p class="m-0">{{__('ui.required2')}}</p></li>
+                    <li><p class="m-0 fst-italic">{{__('ui.titleObbligatory')}}</p></li>
+                    <li><p class="m-0 fst-italic">{{__('ui.required1')}}</p></li>
+                    <li><p class="m-0 fst-italic">{{__('ui.required2')}}</p></li>
                 </ul>
             </div>
             <div class="mb-3">
@@ -97,7 +97,7 @@
                 </select>
 
                 <ul class="small-text">
-                    <li><p class="m-0">{{__('ui.titleObbligatory')}}</p></li>
+                    <li><p class="m-0 fst-italic">{{__('ui.titleObbligatory')}}</p></li>
                 </ul>
                 
             </div>
