@@ -141,7 +141,7 @@ class ArticleCreate extends Component
         //     'name'=>$this->name
         // ]);
       
-        session()->flash('message' , 'Articolo mandato in revisione correttamente') ;
+        session()->flash('message' , "{{__('ui.articleRevision')}}") ;
 
         $this->reset(); 
 

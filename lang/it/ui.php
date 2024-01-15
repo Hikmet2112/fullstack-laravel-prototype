@@ -6,6 +6,11 @@ return[
     'articles'=>'Articoli',
     'buttonSearch'=>'Cerca',
     'reviewer'=> 'Revisione',
+    'articleCreate'=>'Crea il tuo articolo',
+    'sito'=>'E-presto',
+    'announcements'=>'I nostri Annunci',
+    'insertAnnoucement'=>'Inserisci annuncio',
+
 
     //CATEGORIE
     'furniture'=>'Arredamento',
@@ -34,9 +39,76 @@ return[
 
    'titleModal'=>'Candidatura revisor:',
 
-   //titolo annunci
+  
 
-   'OurAds'=>'I nostri annunci'
+   //Form login
+
+   'login'=>'Accedi',
+
+   'loginRegister'=>'Non sei registrato? Registrati',
+
+   //INSERIMENTO ARTICOLO
+
+   'nameArticle'=>'Nome articolo',
+
+   'titleObbligatory'=> 'Il campo è obbligatorio',
+
+   'campObbligatory'=> 'Il campo deve contenere almeno 3 caratteri',
+
+   'obbligatoryCamp'=> 'Il campo non deve contenere più di 8 caratteri',
+
+   'required1'=> 'Il campo deve contenere almeno 15 caratteri',
+
+  'required2'=> 'Il campo non deve contenere più di 500 caratteri',
+
+  'category'=>'Categoria',
+
+  'description' =>'Descrizione',
+
+  'price'=>'Prezzo',
+
+  'selectCategory'=>'Seleziona la tua categoria',
+
+  'delete'=>'Elimina',
+
+  'insert'=>'Inserisci',
+
+  //Form registrazione
+
+  'nomeUtente'=>'Nome utente',
+
+  'confirmPass'=>'Conferma password',
+
+  'register'=>'Registrati',
+
+  'questionAccount'=>'Hai già un account? Fai il login',
+
+  'here'=>'qui',
+
+  'required3'=>'Il campo deve contenere almeno 8 caratteri',
+
+  //Flash message
+
+  'articleRevision'=>'Articolo mandato in revisione correttamente',
+
+  //index revisor
+
+  'titleRevisor'=>'Articoli da revisionare',
+
+  'articleRevisor'=>'Ecco l\'annuncio da revisionare',
+
+  'nonArticleRevisor'=>'Non ci sono annunci da revisionare',
+
+  'buttonAccept'=>'Accetta',
+
+  'buttonReject'=>'Rifiuta',
+  
+
+
+
+
+
+
 
 
 

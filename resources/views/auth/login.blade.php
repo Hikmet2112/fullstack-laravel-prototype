@@ -15,9 +15,9 @@
                         <label for="password" class="form-label">Password </label>
                         <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password">
                     </div>
-                    <button type="submit" class="btn btn-dark">Accedi</button>
+                    <button type="submit" class="btn btn-dark">{{__('ui.login')}}</button>
                     <p class="my-3">
-                        Non sei registrato? Registrati <a href="{{route('register')}}">qui</a>
+                        {{__('ui.loginRegister')}} <a href="{{route('register')}}">{{__('ui.here')}}</a>
                     </p>
                   </form>
             </div>

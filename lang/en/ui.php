@@ -6,6 +6,13 @@ return[
      'articles'=>'Articles',
      'buttonSearch'=>'Search',
      'reviewer'=>'Revision',
+     'articleCreate'=>'Create your article',
+    'sito'=>'E-presto',
+    'announcements'=>'Our announcements',
+    'insertAnnoucement'=>'Insert annoucement',
+
+    
+
      //CATEGORIE
      'furniture'=>'Furniture',
      'electronics'=> 'Electronics',
@@ -34,9 +41,83 @@ return[
 
 'titleModal'=>'Auditor application :',
 
-//Titolo annunci
 
-'OurAds'=>'Our announcements'
+
+ //Form login
+
+ 'login'=>'Login',
+
+ 'loginRegister'=>'Not registered? Sign in click',
+
+   //INSERIMENTO ARTICOLO
+
+   'nameArticle'=>'Product name',
+
+   'titleObbligatory'=> 'The field is mandatory',
+
+   'campObbligatory'=> 'The field must have at least 3 characters',
+
+   'obbligatoryCamp'=> 'The field must not contain more than 8 characters',
+
+   'required1'=> 'The field must contain at least 15 characters',
+
+  'required2'=> 'The field must not contain more than 500 characters',
+
+  'category'=>'Category',
+
+  'description' =>'Description',
+
+  'price'=>'Price',
+
+  'selectCategory'=>'Select Category',
+
+  'delete'=>'delete',
+
+  'insert'=>'Insert',
+
+   //Form registrazione
+
+   'nomeUtente'=>'User name',
+
+   'confirmPass'=>'Confirm password',
+ 
+   'register'=>'Sign in',
+ 
+   'questionAccount'=>'Do you already have an account? log in',
+
+   'here'=>'here',
+
+
+   'required3'=>'The field must contain at least 8 characters.',
+
+    //Flash message
+
+  'articleRevision'=>'Item sent for review successfully',
+
+   //index revisor
+
+   'titleRevisor'=>'Items to review',
+
+  'articleRevisor'=>'Here is the ad for review',
+
+  'nonArticleRevisor'=>'There are no ads to review',
+
+  'buttonAccept'=>'Accept',
+
+  'buttonReject'=>'Reject',
+
+
+   
+
+
+
+  
+
+
+
+
+
+
 
      
 ];

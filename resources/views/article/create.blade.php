@@ -1,6 +1,9 @@
 <x-layout>
 
-  <x-masthead title='Crea il tuo articolo'></x-masthead>
+  
+  <x-masthead title='articleCreate'>
+  </x-masthead>
+
 
 
   <div class="container my-5">

@@ -23,19 +23,19 @@
             </div> --}}
 
             <div class="mb-3">
-                <label for="title" class="form-label">Nome prodotto</label>
+                <label for="title" class="form-label">{{__('ui.nameArticle')}}</label>
                 <input type="text" wire:model.blur='title' class="form-control" id="title">
                 <ul class="small-text">
-                    <li><p class="m-0">Il campo è obbligatorio</p></li>
-                    <li><p class="m-0">Il campo deve contenere almeno 3 caratteri</p></li>
+                    <li><p class="m-0">{{__('ui.titleObbligatory')}}</p></li>
+                    <li><p class="m-0">{{__('ui.campObbligatory')}}</p></li>
                 </ul>
             </div>
             <div class="mb-3">
-                <label for="price" class="form-label">Prezzo</label>
+                <label for="price" class="form-label">{{__('ui.price')}}</label>
                 <input type="number" step="0.01" wire:model.blur='price' class="form-control" id="price">
                 <ul class="small-text">
-                    <li><p class="m-0">Il campo è obbligatorio</p></li>
-                    <li><p class="m-0">Il campo non deve contenere più di 8 caratteri</p></li>
+                    <li><p class="m-0">{{__('ui.titleObbligatory')}}</p></li>
+                    <li><p class="m-0">{{__('ui.obbligatoryCamp')}}</p></li>
                 </ul>
             </div>
             <div>
@@ -63,7 +63,7 @@
                                     @endif
                                 
                                 </div>
-                                <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Elimina</button>
+                                <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.delete')}}</button>
                                 
                             </div>
                             @endforeach
@@ -74,21 +74,21 @@
             @endif
            
             <div class="d-flex flex-column mb-3">
-                <label for="body" class="form-label">Descrizione</label>
+                <label for="body" class="form-label">{{__('ui.description')}}</label>
                 <textarea class="form-control" name="body" wire:model.blur='body' id="body" cols="40" rows="3"></textarea>
                 <ul class="small-text">
-                    <li><p class="m-0">Il campo è obbligatorio</p></li>
-                    <li><p class="m-0">Il campo deve contenere almeno 15 caratteri</p></li>
-                    <li><p class="m-0">Il campo non deve contenere più di 500 caratteri</p></li>
+                    <li><p class="m-0">{{__('ui.titleObbligatory')}}</p></li>
+                    <li><p class="m-0">{{__('ui.required1')}}</p></li>
+                    <li><p class="m-0">{{__('ui.required2')}}</p></li>
                 </ul>
             </div>
             <div class="mb-3">
 
-                <label for="category" class="form-label">Categoria</label>
+                <label for="category" class="form-label">{{__('ui.category')}}</label>
                 
                 <select class="form-select" wire:model.defer="category" id="category" aria-label="Default select example">
 
-                    <option value="" hidden>Seleziona una categoria</option>
+                    <option value="" hidden>{{__('ui.selectCategory')}}</option>
 
                     @foreach ($categories as $category)
                         <option value="{{$category->id}}">{{$category->name}}</option>
@@ -97,11 +97,11 @@
                 </select>
 
                 <ul class="small-text">
-                    <li><p class="m-0">Il campo è obbligatorio</p></li>
+                    <li><p class="m-0">{{__('ui.titleObbligatory')}}</p></li>
                 </ul>
                 
             </div>
-            <button  type="submit" class="btn-canvas-cus">Inserisci</button>
+            <button  type="submit" class="btn-canvas-cus">{{__('ui.insert')}}</button>
         </form>
     </div>
     

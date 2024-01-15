@@ -6,6 +6,14 @@ return[
     'articles'=>'Des articles',
     'buttonSearch'=>'Près',
     'reviewer'=>'Révision',
+    'articleCreate'=>'Créez votre article',
+    'sito'=>'E-presto',
+    'announcements'=>'Nos annonces',
+    'insertAnnoucement'=>'Insère une annonce',
+
+
+
+
     //CATEGORIE
     'furniture'=>'Meubles',
     'electronics'=> 'Électronique',
@@ -34,9 +42,82 @@ return[
 
 'titleModal'=>'Demande d\'auditeur:',
 
-//Titolo annunci
 
-'OurAds'=>'Nos annonces'
+
+//Form login
+
+'login'=>'Se connecter',
+
+'loginRegister'=>'Non enregistré? Inscrivez-vous',
+
+  //INSERIMENTO ARTICOLO
+
+  'nameArticle'=>'Nom du produit',
+
+  'titleObbligatory'=> 'Le champ est obligatoire',
+
+  'campObbligatory'=> 'Le champ doit contenir au moins 3 caractères',
+
+  'obbligatoryCamp'=> 'Le champ ne doit pas contenir plus de 8 caractères',
+
+  'required1'=> 'Le champ doit contenir au moins 15 caractères',
+
+  'required2'=> 'Le champ ne doit pas contenir plus de 500 caractères',
+
+  'category'=>'Catégorie',
+
+  'description' =>'Description',
+
+  'price'=>'Prix',
+
+  'selectCategory'=>'Choisir une catégorie',
+
+  'delete'=>'Supprimer',
+
+  'insert'=>'Insérer',
+
+    //Form registrazione
+
+    'nomeUtente'=>'Nom d\'utilisateur',
+
+    'confirmPass'=>'Confirmez le mot de passe',
+  
+    'register'=>'Se connecter',
+  
+    'questionAccount'=>'Avez-vous déjà un compte? Connectez-vous',
+
+    'here'=>'ici',
+
+    
+    'required3'=>'Le champ doit contenir au moins 8 caractères.',
+
+     //Flash message
+
+  'articleRevision'=>'Article envoyé pour examen avec succès',
+
+   //index revisor
+
+   'titleRevisor'=>'Éléments à revoir',
+
+  'articleRevisor'=>'Voici l\'annonce pour examen',
+
+  'nonArticleRevisor'=>'Il n\'y a aucune annonce à examiner',
+
+  'buttonAccept'=>'Accepter',
+
+  'buttonReject'=>'Refuser',
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ];
