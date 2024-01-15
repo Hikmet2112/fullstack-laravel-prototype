@@ -140,5 +140,65 @@ body{
     }
 }
 
+#video-header{
+    
+   
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+.icon-custom{
+
+    color: var(--whiteCus);
+    font-weight: bold;
+}
+
+.title-custom{
+
+    font-style: italic;
+    font-size: 150px;
+    color: var(--whiteCus);
+}
+
+.text-masthead{
+    font-style: italic;
+    font-size: 27px;
+    font-weight: bold; 
+
+   color:var(--whiteCus);
+}
+
+.button-article{
+
+    font-style: italic;
+  
+
+   color:var(--whiteCus);
+
+
+}
+
+.register{
+    color: var(--blackCus);
+    border-color: var(--blackCus);
+    background-color: rgb(229, 227, 225);
+  
+}
+
+.form-article{
+
+    /* position: relative;
+    top: 0;
+    left: 0;
+    object-fit: cover; */
+    z-index:1 !important;
+
+}
 
 

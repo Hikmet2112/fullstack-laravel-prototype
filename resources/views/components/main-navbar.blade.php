@@ -54,15 +54,7 @@
         </li>
         @endauth
       </ul>
-      <li class="nav-item">
-        <x-_locale lang="it"></x-_locale>
-      </li>
-      <li class="nav-item">
-        <x-_locale lang="en"></x-_locale>
-      </li>
-      <li class="nav-item">
-        <x-_locale lang="fr"></x-_locale>
-      </li>
+ 
   
       <form class="d-flex bg-collapse me-3" action="{{route('articles.search')}}" method="GET" role="search">
         <input name="searched" id="searched" class="form-control me-2" type="search" placeholder="{{__('ui.buttonSearch')}}" aria-label="Search">
