@@ -87,6 +87,7 @@ return[
     'questionAccount'=>'Avez-vous déjà un compte? Connectez-vous',
 
     'here'=>'ici',
+    'Pass'=>'Entrer le mot de passe',
 
     
     'required3'=>'Le champ doit contenir au moins 8 caractères.',

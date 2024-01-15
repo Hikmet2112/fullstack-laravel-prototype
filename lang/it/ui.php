@@ -87,6 +87,8 @@ return[
 
   'required3'=>'Il campo deve contenere almeno 8 caratteri',
 
+  'Pass'=>'Inserisci password',
+
   //Flash message
 
   'articleRevision'=>'Articolo mandato in revisione correttamente',

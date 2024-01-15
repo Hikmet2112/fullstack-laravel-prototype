@@ -90,6 +90,8 @@ return[
 
    'required3'=>'The field must contain at least 8 characters.',
 
+   'Pass'=>'Enter password',
+
     //Flash message
 
   'articleRevision'=>'Item sent for review successfully',

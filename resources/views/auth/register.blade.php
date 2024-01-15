@@ -21,7 +21,7 @@
                     </ul>
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label">{{__('ui.confirmPass')}}</label>
+                    <label for="password" class="form-label">{{__('ui.Pass')}}</label>
                     <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password">
                     <ul class="small-text">
                         <li><p class="m-0">{{__('ui.required3')}}</p></li>

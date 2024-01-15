@@ -142,7 +142,7 @@ class ArticleCreate extends Component
         //     'name'=>$this->name
         // ]);
       
-        session()->flash('message' , "{{__('ui.articleRevision')}}") ;
+        session()->flash('message' , __('ui.articleRevision')) ;
 
         $this->reset(); 
 
