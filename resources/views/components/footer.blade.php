@@ -1,4 +1,4 @@
-<footer class="py-3 gradient-footer">
+<footer class="py-3 gradient-footer footer   w-100">
   <div class="d-flex justify-content-center">
     <div class="hr"></div>
   </div>

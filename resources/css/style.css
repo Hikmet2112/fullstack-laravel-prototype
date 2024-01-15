@@ -48,6 +48,8 @@ body {
     /* box-shadow: 2px 2px var(--blackCus); */
     padding: 15px;
     transition: 0.4s;
+    color: var(--blackCus) !important;
+ 
 }
 
 .category-nav-link:hover {
@@ -71,7 +73,7 @@ body {
     display: flex;
     position: fixed;
     z-index: 10;
-    width: 100vw;
+    width: 100%;
 }
 
 .badge-custom {
@@ -107,6 +109,15 @@ body {
     color: var(--whiteCus);
 }
 
+.footer{
+
+    /* position: absolute;
+    bottom: 0;
+    width: 100%; */
+
+
+}
+
 .btn-canvas-cus {
     background-color: var(--blackCus);
     color: var(--whiteCus);
@@ -139,13 +150,39 @@ body {
         padding-right: 20px;
     }
 }
+@media only screen and (max-width: 700px) {
+    .h1-custom-size{
+      font-size: 90px !important;
+      
+    
+    
+    }
+
+
+}
+@media only screen and (max-width: 400px) {
+    #video-header {
+      
+        height: 130vh;
+    
+    
+    }
+
+
+}
+
+.z-index{
+    z-index: 100 !important;
+}
+
+
 
 #video-header{
     
    
     position: absolute;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     top: 0;
     left: 0;
     object-fit: cover;
@@ -155,8 +192,9 @@ body {
 
 .icon-custom{
 
-    color: var(--whiteCus);
+    color: var(--blackCus);
     font-weight: bold;
+    
 }
 
 .title-custom{
@@ -198,6 +236,19 @@ body {
     left: 0;
     object-fit: cover; */
     z-index:1 !important;
+
+}
+
+.pippo{
+
+color: #ee9b00 !important;
+
+}
+
+.btn-size-cus{
+
+    width: 300px;
+    
 
 }
 

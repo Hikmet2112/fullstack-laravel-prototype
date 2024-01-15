@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg contenitore-navbar">
-  <div class="container-fluid bg-collapse"> 
+<nav class="navbar navbar-expand-lg  p-0 position-fixed w-100 z-index ">
+  <div class="container-fluid bg-collapse  mb-2 p-3 p-md-1 "> 
     @auth
     <a class="btn btn-cus-nav" data-bs-toggle="offcanvas" href="#offcanvasDark" role="button" aria-controls="offcanvasExample">
       <i class="fa-solid fa-circle-user fa-xl text-white"></i>
@@ -9,7 +9,7 @@
     <button class="navbar-toggler border-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-xl text-white"></i></span>
     </button>
-    <div class="collapse navbar-collapse p-3 p-md-0 my-3" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse  p-md-0 my-3" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-collapse">
         <li class="nav-item ms-3 p-0">
           <a class="nav-link text-white" aria-current="page" href="{{route('homepage')}}"><i class="fa-solid fa-house fs-5"></i></a>

@@ -4,7 +4,7 @@
   title='titleRevisor'
   ></x-masthead>
   
-  <div class="container-fluid p-1 bg-dark shadow mb-5">
+  <div class="container-fluid p-1 bg-dark shadow my-5 ">
     <div class="row">
       <div class="col-12 text-light p-5">
         <h1 class="disply-2">{{$article_to_check ? __('ui.articleRevisor') : __('ui.nonArticleRevisor')}}</h1>
