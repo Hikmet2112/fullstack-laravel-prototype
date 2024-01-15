@@ -2,9 +2,13 @@ import './bootstrap';
 import 'bootstrap';
 
 
-// importo swiper
+
+
+// import Swiper from "swiper";
+
+
 
 
 // import { Autoplay, Navigation, Pagination } from "swiper";
-// import Swiper from "swiper";
+
 // Swiper.use([Autoplay, Navigation, Pagination]);
