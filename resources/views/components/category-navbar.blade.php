@@ -2,11 +2,16 @@
     <div class="row justify-content-evenly">
         
         <div class="col-5 col-md-1 category-nav-link d-flex flex-column justify-content-center p-3 my-1">
+        
             <a href="{{route('categoryShow',[1])}}" class="d-flex flex-column align-items-center decoration-none">
+                
                 <p class="text-black">{{__('ui.furniture')}}</p>
+
                 <i class="fa-solid fa-couch fa-xl text-black"></i>
             </a>
+            
         </div>
+        
         <div class="col-5 col-md-1 category-nav-link d-flex flex-column justify-content-center p-3 my-1">
             <a href="{{route('categoryShow',[2])}}" class="d-flex flex-column align-items-center decoration-none">
                 <p class="text-black">{{__('ui.electronics')}}</p>

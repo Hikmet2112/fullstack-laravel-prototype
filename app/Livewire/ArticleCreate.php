@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use File;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
