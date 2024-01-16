@@ -249,7 +249,46 @@ color: #ee9b00 !important;
     max-height: 500px;
     max-width: 500px;
     object-fit: cover;
-}
+} 
 
+
+.shadow-form{
+
+    border-radius: 3%; 
+    /* box-shadow: 2px 3px 21px 10px #778DA9 */ 
+     
+     /* box-shadow: 34px 3px 18px 12px rgba(102,102,110,0.83);  */
+     width: 500px;
+} 
+
+
+.title-register{ 
+
+    font-style: italic;
+    font-size: 53px; 
+    font-weight: bold;
+    color: var(--whiteCus);
+
+
+} 
+
+.bg-image{
+
+    background-image: url('/public/storage/Video/foto2.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    
+}  
+
+.bg-login{ 
+    background: linear-gradient(90deg, rgba(235,208,56,1) 0%, rgba(148,187,233,1) 100%);
+
+    /* background-image: url('/public/storage/Video/mi.webp');  */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    
+}
 
 
