@@ -20,16 +20,18 @@ class ResizeImage implements ShouldQueue
     private $h;
     private $w;
     private $path;
-    private $filename;
+    private $filename; 
+    
     /**
      * Create a new job instance.
      */
-    public function __construct($filePath, $w, $h)
+    public function __construct($filePath, $w, $h, )
     {
         $this->path=dirname($filePath);
         $this->filename=basename($filePath);
         $this->w=$w;
-        $this->h=$h;
+        $this->h=$h; 
+       
     }
 
 
@@ -45,10 +47,16 @@ class ResizeImage implements ShouldQueue
         $w= $this->w;
         $h= $this->h;
         $srcPath= storage_path() . "/app/public/" . $this->path . "/" . $this->filename;
+        
         $destPath= storage_path() . "/app/public/" . $this->path . "/crop_{$w}x{$h}_" . $this->filename;
         
         $croppedImage=Image::load($srcPath)
-                      ->crop(Manipulations::CROP_CENTER, $w, $h)
+                      ->crop(Manipulations::CROP_CENTER, $w, $h) 
+                      ->watermark(base_path('resources/image/E-presto.png'))
+                      ->watermarkOpacity(50) 
+                      ->watermarkPosition(Manipulations::POSITION_BOTTOM_RIGHT)      // Watermark at the top
+                      ->watermarkHeight(30, Manipulations::UNIT_PERCENT)    // 50 percent height
+                      ->watermarkWidth(30, Manipulations::UNIT_PERCENT) 
                       ->save($destPath);
 
         // $croppedImage=$image->fit(Fit::crop(), int $w, int $h)->save($destPath);
