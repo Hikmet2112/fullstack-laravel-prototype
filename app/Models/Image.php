@@ -11,6 +11,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Image extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'labels'=>'array'
+    ];
+
     protected $fillable=['path'];
     
     public function article(){

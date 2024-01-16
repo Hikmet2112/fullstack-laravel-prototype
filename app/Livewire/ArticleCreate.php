@@ -6,8 +6,11 @@ use File;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -116,7 +119,11 @@ class ArticleCreate extends Component
                 $newFileName= "articles/{$this->article->id}";
                 $newImage= $this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
-                dispatch(new ResizeImage($newImage->path, 400 , 300));
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 400 , 300),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
             }
 
             File::deletedirectory(storage_path('/app/livewire-tmp'));
