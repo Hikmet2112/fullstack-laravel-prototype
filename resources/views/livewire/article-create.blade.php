@@ -38,8 +38,9 @@
                     <li><p class="m-0 fst-italic">{{__('ui.obbligatoryCamp')}}</p></li>
                 </ul>
             </div>
-            <div>
-                <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" 
+            <div class="mb-4">
+                <label for="images" class="form-label">{{__('ui.images')}}</label>
+                <input wire:model="temporary_images" type="file" id="images" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" 
                     placeholder="immagine">
                  @error('temporary_images.*')
                     <p class="text-danger mt-2">{{$message}}</p>
@@ -52,14 +53,14 @@
                 <div class="row">
                     <div class="col-12">
                         <p>Anteprima foto:</p>
-                        <div class="row border border-4 border-info rounded shadow pt-4">
+                        <div class="row border border-4 rounded shadow pt-4">
                             @foreach($images as $key => $image)
                             <div class="col  my-3">
                                 
-                                <div class="img-preview d-flex justify-content-center rounded">  
+                                <div class="img-preview d-flex justify-content-center align-items-center rounded">  
                                     
                                     @if ($image) 
-                                    <img class="" src="{{ $image->temporaryUrl() }}">
+                                    <img class="img-preview" src="{{ $image->temporaryUrl() }}">
                                     @endif
                                 
                                 </div>

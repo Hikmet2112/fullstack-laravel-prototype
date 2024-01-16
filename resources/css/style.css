@@ -252,4 +252,11 @@ color: #ee9b00 !important;
 
 }
 
+.img-preview {
+    max-height: 500px;
+    max-width: 500px;
+    object-fit: cover;
+}
+
+
 

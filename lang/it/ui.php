@@ -110,6 +110,8 @@ return[
   'acceptArticle'=>'Annuncio accettato',
 
   'rejectArticle'=>'Annuncio rifiutato',
+
+  'images'=>'Inserisci immagini'
   
 
 
