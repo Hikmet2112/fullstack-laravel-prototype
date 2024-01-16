@@ -1,14 +1,8 @@
 
 <x-layout> 
     
-    {{-- <div class="container-fluid mt-3"> 
-        <div class="row justify-content-center ">
-            <div class="col-12 col-md-6 d-flex justify-content-center">
-           <h1 class="title-register">Crea il tuo account</h1>
-            </div>
-
-        </div>
-    </div> --}}
+    
+    
     
     
     
@@ -18,10 +12,9 @@
     
     <div class="container-fluid bg-image">
         <div class="row justify-content-center">
-            
-            <div class="col-12 col-md-6 shadow-form m-5 bg-dark pluto "> 
-                <h1 class="title-register text-center mt-5">Crea il tuo account</h1> 
-              <hr class="text-light">
+            <div class="col-12 col-md-6 shadow-form m-5 bg-dark"> 
+                <h1 class="title-register text-center mt-5">Crea il tuo account</h1>  
+                <hr class="text-light">
                 <form enctype="multipart/form-data" method="POST" action="{{route('register')}}" class="p-4  my-5 rounded-4">
                     @csrf
                     <div class="mb-3">
@@ -40,7 +33,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label text-light">{{__('ui.Pass')}}</label>
-                        <input type="password" name="password text-light" class="form-control @error('password') is-invalid @enderror" id="password">
+                        <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password">
                         <ul class="small-text">
                             <li><p class="m-0 fst-italic text-light">{{__('ui.required3')}}</p></li>
                         </ul>
