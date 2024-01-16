@@ -12,9 +12,10 @@
     
     <div class="container-fluid bg-image">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6 shadow-form m-5 bg-dark"> 
-                <h1 class="title-register text-center mt-5">Crea il tuo account</h1>  
-                <hr class="text-light">
+            
+            <div class="col-12 col-md-6 shadow-form m-5 bg-dark pluto "> 
+                <h1 class="title-register text-center mt-5">{{__('ui.register')}}</h1> 
+              <hr class="text-light">
                 <form enctype="multipart/form-data" method="POST" action="{{route('register')}}" class="p-4  my-5 rounded-4">
                     @csrf
                     <div class="mb-3">
