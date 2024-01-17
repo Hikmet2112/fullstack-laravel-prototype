@@ -64,9 +64,8 @@
   </div>
 </nav>
 
-
-
-{{-- <div class="container-fluid contenitore-navbar">
+ {{-- Modale foto profilo --}}
+<div class="container-fluid contenitore-navbar">
   <div class="row">
     <div class="col-12">
       <nav class="main-navbar">
@@ -83,4 +82,4 @@
       </nav>
     </div>
   </div>
-</div> --}}
+</div>

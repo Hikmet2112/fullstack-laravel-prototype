@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class ProfileController extends Controller
 {
 
-    public $profile_img;
+    // public $profile_img;
 
     /**
      * Display a listing of the resource.
@@ -39,16 +39,26 @@ class ProfileController extends Controller
             'profile_img'=>'image|max:2048'
         ]);
 
-        if($request->file('profile-img')) {
+        if($request->file('profile_img')) {
             $profile_img = $request->file('profile_img')->store('public/image');
         } else {
             $profile_img = 'public/image/default-profile-img.png';
         }
 
-        Profile::create([
-            'profile_img' => $profile_img,
-            'user_id' => Auth::user()->id
-        ]);
+        if(!Auth::user()->profile) {
+            Auth::user()->profile()->create([
+                'profile_img' => $profile_img
+            ]);
+        } else {
+            Auth::user()->profile()->update([
+                'profile_img' => $profile_img
+            ]);
+        }
+
+
+        // Profile::updateOrCreate([
+        //     'user_id' => Auth::user()->id
+        // ]);
 
         return redirect('/')->with('message', 'Foto profilo aggiornata con successo');
     }

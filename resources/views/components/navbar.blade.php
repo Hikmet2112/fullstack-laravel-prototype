@@ -2,12 +2,16 @@
 <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
   <div class="d-flex justify-content-end m-3"><button type="button" class="btn-close btn-close-white  " data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
   @auth
-  <div class="d-flex justify-content-center"><img class="UserImg my-4" src="https://picsum.photos/200" alt="Immagine utente"></div>
-  {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <div class="d-flex justify-content-center"><img class="UserImg my-4"
+    @if(Auth::user()->profile) src="{{Storage::url(Auth::user()->profile->profile_img)}}"
+    @else src="{{Storage::url('public/image/default-profile-img.png')}}"
+    @endif
+    alt="Immagine utente"></div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     <i class="fa-solid fa-user-pen fa-2xl m-5"></i>
-  </button> --}}
-
+  </button>
   @endauth
+
   <div class="offcanvas-header d-flex justify-content-center mb-3"> 
     @auth
     <h5 class="offcanvas-title" id="offcanvasDarkLabel">{{Auth::user()->name}}</h5>
@@ -27,8 +31,8 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             {{-- <li class="nav-item">
               <a class="nav-link active text-white" aria-current="page" href="{{route('homepage')}}"><i class="fa-solid fa-house fs-5"></i></a>
-            </li> --}}
-            {{-- <li class="nav-item">
+            </li>
+            <li class="nav-item">
               <a class="nav-link text-white" href="{{route('article.index')}}">Tutti gl'articoli</a>
             </li> --}}
             @auth 

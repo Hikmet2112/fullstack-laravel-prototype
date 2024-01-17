@@ -11,11 +11,11 @@ class Profile extends Model
     use HasFactory;
 
     protected $fillable = [
-        'profile-img', 'user_id'
+        'profile_img', 'user_id'
     ];
 
     public function user() {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class);
         
     }
 }
