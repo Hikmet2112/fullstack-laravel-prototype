@@ -15,7 +15,11 @@
         </div>
         @endif
 
-        <form enctype="multipart/form-data" class="p-4 border-4 shadow rounded form-article bg-white" wire:submit="articleStore">
+        <div class="container-fluid bg-image">
+            <div class="row justify-content-center">              
+                <div class="col-12 col-md-6 shadow-form m-5 bg-dark text-light"> 
+
+        <form enctype="multipart/form-data" class="p-4 border-4 shadow rounded " wire:submit="articleStore">
             
             {{-- <div class="mb-3">
                 <label for="img" class="form-label"> Allega file</label>
@@ -106,4 +110,9 @@
         </form>
     </div>
     
+</div>
+
+</div>
+    
+</div>
 </div>

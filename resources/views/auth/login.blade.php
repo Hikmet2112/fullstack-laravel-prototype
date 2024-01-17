@@ -16,9 +16,8 @@
                         <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password">
                     </div>
                     <button type="submit" class="btn btn-dark mt-4">{{__('ui.login')}}</button>
-                    <p class="my-3 fw-bold text-dark fs-4">
-                        {{__('ui.loginRegister')}} <button class="btn btn-dark rounded-4"><a class="text-light" href="{{route('register')}}">{{__('ui.here')}}</a></button>
-                    </p>
+                    <p class="my-3 fw-bold text-dark fs-5">
+                        {{__('ui.loginRegister')}} <a class="text-dark" href="{{route('register')}}">{{__('ui.here')}}</a>
                   </form>
             </div>
         </div>
