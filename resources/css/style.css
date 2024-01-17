@@ -10,9 +10,10 @@ html{
 }
 
 body {
-    background-color: var(--whiteCus); 
+    /* background-color: var(--whiteCus);  */
     margin: 0; 
     padding: 0;
+    background: linear-gradient();
 }
 
 .UserImg {
@@ -299,5 +300,6 @@ color: #ee9b00 !important;
     background-repeat: no-repeat; 
     
 }
+
 
 
