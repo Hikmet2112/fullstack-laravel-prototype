@@ -13,7 +13,7 @@
     <div class="container-fluid bg-image">
         <div class="row justify-content-center">
             
-            <div class="col-12 col-md-6 shadow-form m-5 bg-dark pluto "> 
+            <div class="col-12 col-md-6 shadow-form m-5 bg-dark"> 
                 <h1 class="title-register text-center mt-5">{{__('ui.register')}}</h1> 
               <hr class="text-light">
                 <form enctype="multipart/form-data" method="POST" action="{{route('register')}}" class="p-4  my-5 rounded-4">
@@ -43,9 +43,9 @@
                         <label for="password_confirmation" class="form-label text-light">{{__('ui.confirmPass')}}</label>
                         <input type="password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" id="password_confirmation">
                     </div>
-                    <button type="submit" class="btn btn-dark">{{__('ui.register')}}</button>
+                    <button type="submit" class="btn-canvas-cus">{{__('ui.register')}}</button>
                     <p class="my-3 text-light">
-                        {{__('ui.questionAccount')}} <button class="btn btn-light"><a href="{{route('login')}}">{{__('ui.here')}}</a></button>
+                        {{__('ui.questionAccount')}} <a class="text-light" href="{{route('login')}}">{{__('ui.here')}}</a>
                     </p>
                 </form>
             </div>

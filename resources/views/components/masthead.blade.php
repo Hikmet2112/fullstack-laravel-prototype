@@ -1,4 +1,4 @@
-<div class=" text-center video-container w-100 ">
+<div class=" text-center video-container  w-100">
   <video autoplay muted loop id="video-header">
     <source src="/storage/Video/video.mp4" type="video/mp4">
   </video>

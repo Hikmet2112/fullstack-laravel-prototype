@@ -2,12 +2,12 @@
   
   <!-- Modal --> 
   
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade bg-form-cust text-light" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content shadow-form m-5 bg-dark text-light">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">{{__('ui.titleModal')}} {{Auth::user()->name}}</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h1 class="modal-title fs-5 font-modale" id="staticBackdropLabel">{{__('ui.titleModal')}} {{Auth::user()->name}}</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
      
@@ -16,7 +16,7 @@
         <div class="row justify-content-center">
     
             <div class="col-12 ">
-                <form method="POST" action="{{route('become.revisor')}}" class="p-4  my-5 rounded-4">
+                <form method="POST" action="{{route('become.revisor')}}" class="p-1  my-1 rounded-4">
                     @csrf 
                     
                     <div class="mb-3">
@@ -34,7 +34,7 @@
                         <textarea class="form-control"  name="body" id="body" cols="35" rows="7"></textarea>
                       </div>
                   <div>
-                     <button type="submit" class="btn btn-canvas-cus">{{__('ui.sendApplication')}}</button>
+                     <button type="submit" class="btn-canvas-cus">{{__('ui.sendApplication')}}</button>
                   </div>
                 
                     
@@ -47,7 +47,7 @@
     
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
           
         </div>
       </div>
