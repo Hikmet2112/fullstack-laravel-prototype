@@ -2,10 +2,17 @@
     --blackCus: #212529;
     --whiteCus: #e9ecef;
     --greyCus: #adb5bd;
+} 
+html{
+    margin: 0; 
+    padding: 0;
+
 }
 
 body {
-    background-color: var(--whiteCus);
+    background-color: var(--whiteCus); 
+    margin: 0; 
+    padding: 0;
 }
 
 .UserImg {
@@ -153,14 +160,17 @@ body {
 
 
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     #video-header {
       
         height: 130vh;
     
     
     }
-
+    .h1-custom-size{
+        margin-top: 15px ;
+        font-size: 50px !important;
+    }
 
 }
 
@@ -195,7 +205,8 @@ body {
     font-style: italic;
     font-size: 150px;
     color: var(--whiteCus);
-}
+} 
+
 
 .text-masthead{
     font-style: italic;
