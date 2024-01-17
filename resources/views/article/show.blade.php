@@ -1,10 +1,10 @@
 <x-layout>
   
   
-  <div class="container m-5">
+  <a href="{{route('article.index')}}" class="m-4"><button class="btn btn-dark shadow"><i class="fa-solid fa-arrow-left fa-bounce me-2"></i> Torna indietro</button></a>
+  <div class="container mx-5 mb-5">
     <div class="row justify-content-center"> 
       <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
-        
         @if (!$article->images->isEmpty())
         <div id="carouselExample" class="carousel slide w-100" data-bs-ride="carousel">
           <div class="carousel-inner">
