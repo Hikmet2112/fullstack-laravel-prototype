@@ -5,6 +5,8 @@
 /* importo fontawesome */
 
 @import "@fortawesome/fontawesome-free/css/all.css";
+@import './cardStyle.css';
+@import'./swiper.css'
 
 
 /* importo swiper */

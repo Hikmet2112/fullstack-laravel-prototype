@@ -16,19 +16,29 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             
+            <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+            slides-per-view="auto" coverflow-effect-rotate="20" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+            coverflow-effect-modifier="1" coverflow-effect-slide-shadows="false">
             @foreach ($articles as $article)
-            
-            <x-card-welcome 
-            :article="$article"
-            ></x-card-welcome>
-            
-            
+            <swiper-slide>
+                <x-card-welcome 
+                :article="$article"
+                ></x-card-welcome>
+            </swiper-slide>
+      
             @endforeach
+          </swiper-container>
+
+            
+          
+            
+            
             
             
             
             
         </div> 
+
     </div>
     
 

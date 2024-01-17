@@ -102,9 +102,7 @@ body {
     background-color: var(--blackCus);
 }
 
-/* .card{
-    text-shadow: 50px 50px var(--blackCus);
-} */
+
 
 .hr {
     border-bottom: 1px solid var(--greyCus);
