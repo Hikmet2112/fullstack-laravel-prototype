@@ -12,32 +12,32 @@
     <div class="collapse navbar-collapse  p-md-0 my-3" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-collapse">
         <li class="nav-item ms-3 p-0">
-          <a class="nav-link text-white" aria-current="page" href="{{route('homepage')}}"><i class="fa-solid fa-house fs-5"></i></a>
+          <a class="nav-link text-white" aria-current="page" href="{{route('homepage')}}"></a>
         </li>
         <li class="nav-item pe-3 separator-right">
-          <a class="nav-link text-white" aria-current="page" href="{{route('homepage')}}">Home</a>
+          <a class="nav-link text-white " aria-current="page" href="{{route('homepage')}}"><i class="me-3 fa-solid fa-house fs-5"></i> Home</a>
         </li>  
       
     
         <li class="nav-item ms-3 p-0">
-          <a class="nav-link text-white" aria-current="page" href="{{route('article.index')}}"><i class="fa-solid fa-book fa-xl"></i></a>
+          <a class="nav-link text-white" aria-current="page" href="{{route('article.index')}}"></a>
         </li>
         <li class="nav-item @auth @if(Auth::user()->is_revisor) separator-right @endif @endauth me-3">
-          <a class="nav-link text-white" href="{{route('article.index')}}">{{__('ui.articles')}}</a>
+          <a class="nav-link text-white" href="{{route('article.index')}}"><i class="me-3 fa-solid fa-book fa-xl"></i> {{__('ui.articles')}}</a>
         </li>
      
         
         @auth
         @if(Auth::user()->is_revisor)
         <li class="nav-item">
-          <a class="nav-link text-white" aria-current="page" href="{{route('revisor.index')}}"><i class="fa-solid fa-check fa-xl"></i></a>
+          <a class="nav-link text-white" aria-current="page" href="{{route('revisor.index')}}"></a>
         </li>
         @endif
         <li class="nav-item">
           @if(Auth::user()->is_revisor) 
           <li class="nav-item">
             {{-- <span class="bg-info"><i class="fa-solid fa-check fa-2xl text-white"></i></span> --}}
-            <a class="nav-link text-white btn"  href="{{route('revisor.index')}}">{{__('ui.reviewer')}}
+            <a class="nav-link text-white btn"  href="{{route('revisor.index')}}"><i class=" me-3 fa-solid fa-check fa-xl"></i> {{__('ui.reviewer')}}
               @if (App\Models\Article::toBeRevisionedCount() == 0)
               
               @else    

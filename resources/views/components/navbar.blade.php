@@ -2,13 +2,13 @@
 <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
   <div class="d-flex justify-content-end m-3"><button type="button" class="btn-close btn-close-white  " data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
   @auth
-  <div class="d-flex justify-content-center"><img class="UserImg my-4"
+  <div class="d-flex justify-content-center icon-profile-custom"><img class="UserImg my-4"
     @if(Auth::user()->profile) src="{{Storage::url(Auth::user()->profile->profile_img)}}"
     @else src="{{Storage::url('public/image/default-profile-img.png')}}"
     @endif
     alt="Immagine utente"></div>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    <i class="fa-solid fa-user-pen fa-2xl m-5"></i>
+   <div class="position-icon-profile"><button type="button" class="btn btn-light   size-custom-profile custom-size-profileicon" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-pencil "></i></div>
+    
   </button>
   @endauth
 

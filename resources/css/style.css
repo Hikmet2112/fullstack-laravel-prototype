@@ -28,6 +28,27 @@ body {
 
 }
 
+.position-icon-profile{
+
+    position: relative;
+    top: -70px;
+    left: 100px;
+   
+    
+
+}
+
+.custom-size-profileicon{
+
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    
+
+}
+
+
+
 .dropdown-menu {
 
     background-color: var(--blackCus);
@@ -329,4 +350,28 @@ body {
 
 .font-modale {
     font-size: 30px !important;
+}
+
+.bg-custom{
+
+    border: #212529 solid 1px;
+    background-color: var(--blackCus);
+    border-radius: 10px;
+    color: var(--whiteCus);
+
+}
+
+.height-custom{
+
+
+    height: 80px;
+    padding: 5px;
+
+}
+
+.size-custom-profile{
+
+
+    min-height: 10%;
+
 }
